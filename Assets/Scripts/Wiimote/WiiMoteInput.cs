@@ -23,6 +23,7 @@ using UnityEngine;
 using System;
 using System.Collections;
 using System.Runtime.InteropServices;
+using ReusableMethods;
 
 /// <summary>
 /// This is the class that controls the input data from the wiimote
@@ -82,11 +83,21 @@ public class WiiMoteInput : MonoBehaviour {
     [DllImport("UniWii")]
     private static extern void wiimote_rumble(int which, float duration);
 
-//	[DllImport ("UniWii")]	
-//	private static extern bool wiimote_enableIR( int which );
+    // Imports for expansion
+    [DllImport("UniWii")]
+    private static extern bool wiimote_isExpansionPortEnabled(int which);
 
-	// Display the info of the wiimote data
-	private string display;
+    [DllImport("UniWii")]
+    private static extern byte wiimote_getNunchuckStickX(int which);
+    [DllImport("UniWii")]
+    private static extern byte wiimote_getNunchuckStickY(int which);
+
+
+    //	[DllImport ("UniWii")]	
+    //	private static extern bool wiimote_enableIR( int which );
+
+    // Display the info of the wiimote data
+    private string display;
 	// The x and y position of the pointer ingame
 	private int cursor_x, cursor_y;
     //public int Cursor_x { get { return this.cursor_x; } set { this.cursor_x = value; } }
@@ -151,6 +162,23 @@ public class WiiMoteInput : MonoBehaviour {
     /// (Field) The timer for not be counting wiimotes every frame
     /// </summary>
     private TimerController m_WiimoteCountTimer;
+
+    /// <summary>
+    /// (Field) Controls if there is any expansion port enabled (UniWii only supports nunchuck)
+    /// </summary>
+    [SerializeField]
+    private bool m_IsExpansionPortEnabled;
+
+    /// <summary>
+    /// (Field) The values of the nunchuck joystick
+    /// </summary>
+    [SerializeField]
+    private Vector2 m_NunchuckJoystickValues;
+    /// <summary>
+    /// (Property) The values of the nunchuck joystick
+    /// </summary>
+    public Vector2 NunchuckJoystickValues { get { return this.m_NunchuckJoystickValues; } }
+
 
     // Use this for initialization (WE ONLY INITIALIZE ON STANDALONE)
     void Start () {
@@ -242,6 +270,14 @@ public class WiiMoteInput : MonoBehaviour {
                 //    wiimote_rumble(i, timeToRumble);
                 //}
 
+                // We populate the value for checking the extension port
+                CheckForExtensionPort(i);
+                // We collect the nunchuck joystick data if there is an extension port
+                if (m_IsExpansionPortEnabled)
+                {
+                    GetNunchuckJoystick(i);
+                }
+                
             }
         }
         else
@@ -355,8 +391,38 @@ public class WiiMoteInput : MonoBehaviour {
 		}
 
 	}
-	
-	void OnApplicationQuit() {
+
+    /// <summary>
+    /// Checks if there is any expansion port enabled on the desired wiimote
+    /// </summary>
+    /// <param name="i"> Which wiimote to check </param>
+    private void CheckForExtensionPort (int i)
+    {
+        m_IsExpansionPortEnabled = wiimote_isExpansionPortEnabled(i);
+    }
+
+    /// <summary>
+    /// Gets the nunchuck joystick values
+    /// </summary>
+    /// <param name="i"> The index of which Wiimote to acess</param>
+    private void GetNunchuckJoystick(int i)
+    {
+        // We get the raw data from the nunchuk
+        m_NunchuckJoystickValues.x = wiimote_getNunchuckStickX(i);
+        m_NunchuckJoystickValues.y = wiimote_getNunchuckStickY(i);
+
+        // We normalize them (I checked the values on both axis several times and these are the maximum and minimum I got. Weird)
+        m_NunchuckJoystickValues.x = Normalization.Normalize(m_NunchuckJoystickValues.x, 25, 230);
+        m_NunchuckJoystickValues.y = Normalization.Normalize(m_NunchuckJoystickValues.y, 27, 221);
+
+        // We scale the normalized values between (-1, 1)
+        m_NunchuckJoystickValues.x = Normalization.ScaleNormalize(m_NunchuckJoystickValues.x, -1, 1);
+        m_NunchuckJoystickValues.y = Normalization.ScaleNormalize(m_NunchuckJoystickValues.y, -1, 1);
+
+    }
+
+
+    void OnApplicationQuit() {
 		//wiimote_stop();
         // I MAY NEED TO UNCOMMENT THIS FOR THE FINAL BUILD OF THE GAME!!
 	}
