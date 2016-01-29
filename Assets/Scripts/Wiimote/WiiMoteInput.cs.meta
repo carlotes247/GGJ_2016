@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 8351518e17aced94ba03189c9d20ee60
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - cursor_tex: {fileID: 2800000, guid: 43858020caf8d5f4db0290cb71d5fe2b, type: 3}
+  - ingameCursor: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
