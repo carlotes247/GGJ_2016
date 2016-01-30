@@ -78,13 +78,13 @@ public class PickUpObjects : MonoBehaviour {
 		}
 	}
 
-	public void OnMouseDown() {
-		PickUpLogic ();
+	//public void OnMouseDown() {
+	//	PickUpLogic ();
 
-		// OLD, CAN BE USED WITH MOUSE
-		/*if (playerInRange == true && notPlaced == true) // If the player is within range and the object has not been placed. 
-			objectInHand = true;*/
-	}
+	//	// OLD, CAN BE USED WITH MOUSE
+	//	/*if (playerInRange == true && notPlaced == true) // If the player is within range and the object has not been placed. 
+	//		objectInHand = true;*/
+	//}
 
 	public void PickUpLogic() {
 		if (objectInHand == false) {
@@ -97,15 +97,15 @@ public class PickUpObjects : MonoBehaviour {
 		}
 	}
 
-	public void OnMouseUp() {
-		PickUpLogic ();
+	//public void OnMouseUp() {
+	//	PickUpLogic ();
 
-		// OLD, CAN BE USED WITH MOUSE
-		/*objectPosUpdate = true;
-		objectInHand = false; 
-		rb.useGravity = true; // If you drop the object, the gravity is activated again. */
+	//	// OLD, CAN BE USED WITH MOUSE
+	//	/*objectPosUpdate = true;
+	//	objectInHand = false; 
+	//	rb.useGravity = true; // If you drop the object, the gravity is activated again. */
 
-	}
+	//}
 
 	void OnTriggerEnter(Collider Enter) {
 		if (Enter.gameObject.tag == "AlarmClockPlacement" && alarmInHand == true) { // If the alarm is in hand and it collides with the AlarmClockPlacement object
