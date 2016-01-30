@@ -8894,10 +8894,10 @@ MonoBehaviour:
   screenPointerPos: {x: 0, y: 0, z: 0}
   m_ControllerAxis: {x: 0, y: 0}
   wiimoteInput: {fileID: 11475540}
-  inputType: 1
+  inputType: 0
   m_DelayBetweenShots: 0.1
   m_RotationCamera: {x: 0, y: 0}
-  m_CameraRotationSpeed: 2
+  m_CameraRotationSpeed: 3
 --- !u!114 &11420446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10518,7 +10518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3abba237db48af4c96d80a061b64939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUpRange: 2
+  pickUpRange: 2.5
 --- !u!114 &11434756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13435,7 +13435,7 @@ MonoBehaviour:
   typeOfMovement: 2
   positionToMove: {x: 0, y: 0, z: 0}
   stopRadius: 0
-  maxVelocity: 0.05
+  maxVelocity: 0.12
   forceToApply: 0
   multiplierForceToStop: 0
   initialDistanceToPoint: 0
