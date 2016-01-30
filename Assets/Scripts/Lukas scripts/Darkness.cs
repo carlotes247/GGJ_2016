@@ -21,11 +21,12 @@ public class Darkness : MonoBehaviour {
 	public Light[] environmentLights;
 
 	// Use this for initialization
-	void Start () {
+	public void InitiateCamera () {
+//		theCamera = GameObject.Find ("MainCamera");
+		theCamera = Camera.main.gameObject;
 		initSSAOIntensity = theCamera.GetComponent<SSAOPro> ().Intensity;
 		initSSAORadius = theCamera.GetComponent<SSAOPro> ().Radius;
 		initVignetteIntensity = theCamera.GetComponent<FastVignette> ().Darkness;
-		theCamera = GameObject.Find ("MainCamera");
 		audioSrc = GetComponent <AudioSource> ();
 	}
 	
