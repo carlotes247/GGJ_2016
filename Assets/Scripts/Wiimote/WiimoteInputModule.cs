@@ -193,6 +193,8 @@ public class WiimoteInputModule : PointerInputModule {
         eventSystem.RaycastAll(wiimotePointer, this.m_RaycastResultCache);
         RaycastResult raycastResult = FindFirstRaycast(this.m_RaycastResultCache);
         wiimotePointer.pointerCurrentRaycast = raycastResult;
+        // We process the press of the pointer (PointerDown, PointerUp)
+        this.ProcessWiimotePress(wiimotePointer);
         // We process the move of the pointer
         this.ProcessMove(wiimotePointer);
         // We process the drag of the pointer
@@ -260,5 +262,110 @@ public class WiimoteInputModule : PointerInputModule {
             wiimotePointer.rawPointerPress = null;
         }
 
+    }
+
+    /// <summary>
+    /// Process the current WiimotePress (PointerDown, PointerUp)
+    /// </summary>
+    /// <param name="data"> The wiimotePointer to pass in </param>
+    protected void ProcessWiimotePress(PointerEventData data)
+    {
+        // We already have the buttonData
+        var pointerEvent = data;
+        var currentOverGo = pointerEvent.pointerCurrentRaycast.gameObject;
+
+        // PointerDown notification (pressed this frame)
+        if (Toolbox.Instance.GameManager.InputController.WiimoteInput.ButtonB)
+        {
+            pointerEvent.eligibleForClick = true;
+            pointerEvent.delta = Vector2.zero;
+            pointerEvent.dragging = false;
+            pointerEvent.useDragThreshold = true;
+            pointerEvent.pressPosition = pointerEvent.position;
+            pointerEvent.pointerPressRaycast = pointerEvent.pointerCurrentRaycast;
+
+            DeselectIfSelectionChanged(currentOverGo, pointerEvent);
+
+            // search for the control that will receive the press
+            // if we can't find a press handler set the press
+            // handler to be what would receive a click.
+            var newPressed = ExecuteEvents.ExecuteHierarchy(currentOverGo, pointerEvent, ExecuteEvents.pointerDownHandler);
+
+            // didnt find a press handler... search for a click handler
+            if (newPressed == null)
+                newPressed = ExecuteEvents.GetEventHandler<IPointerClickHandler>(currentOverGo);
+
+            // Debug.Log("Pressed: " + newPressed);
+
+            float time = Time.unscaledTime;
+
+            if (newPressed == pointerEvent.lastPress)
+            {
+                var diffTime = time - pointerEvent.clickTime;
+                if (diffTime < 0.3f)
+                    ++pointerEvent.clickCount;
+                else
+                    pointerEvent.clickCount = 1;
+
+                pointerEvent.clickTime = time;
+            }
+            else
+            {
+                pointerEvent.clickCount = 1;
+            }
+
+            pointerEvent.pointerPress = newPressed;
+            pointerEvent.rawPointerPress = currentOverGo;
+
+            pointerEvent.clickTime = time;
+
+            // Save the drag handler as well
+            pointerEvent.pointerDrag = ExecuteEvents.GetEventHandler<IDragHandler>(currentOverGo);
+
+            if (pointerEvent.pointerDrag != null)
+                ExecuteEvents.Execute(pointerEvent.pointerDrag, pointerEvent, ExecuteEvents.initializePotentialDrag);
+        }
+
+        // PointerUp notification (NOT pressed this frame)
+        if (!Toolbox.Instance.GameManager.InputController.WiimoteInput.ButtonB)
+        {
+            // Debug.Log("Executing pressup on: " + pointer.pointerPress);
+            ExecuteEvents.Execute(pointerEvent.pointerPress, pointerEvent, ExecuteEvents.pointerUpHandler);
+
+            // Debug.Log("KeyCode: " + pointer.eventData.keyCode);
+
+            // see if we mouse up on the same element that we clicked on...
+            var pointerUpHandler = ExecuteEvents.GetEventHandler<IPointerClickHandler>(currentOverGo);
+
+            // PointerClick and Drop events
+            if (pointerEvent.pointerPress == pointerUpHandler && pointerEvent.eligibleForClick)
+            {
+                ExecuteEvents.Execute(pointerEvent.pointerPress, pointerEvent, ExecuteEvents.pointerClickHandler);
+            }
+            else if (pointerEvent.pointerDrag != null && pointerEvent.dragging)
+            {
+                ExecuteEvents.ExecuteHierarchy(currentOverGo, pointerEvent, ExecuteEvents.dropHandler);
+            }
+
+            pointerEvent.eligibleForClick = false;
+            pointerEvent.pointerPress = null;
+            pointerEvent.rawPointerPress = null;
+
+            if (pointerEvent.pointerDrag != null && pointerEvent.dragging)
+                ExecuteEvents.Execute(pointerEvent.pointerDrag, pointerEvent, ExecuteEvents.endDragHandler);
+
+            pointerEvent.dragging = false;
+            pointerEvent.pointerDrag = null;
+
+            // redo pointer enter / exit to refresh state
+            // so that if we moused over somethign that ignored it before
+            // due to having pressed on something else
+            // it now gets it.
+            if (currentOverGo != pointerEvent.pointerEnter)
+            {
+                HandlePointerExitAndEnter(pointerEvent, null);
+                HandlePointerExitAndEnter(pointerEvent, currentOverGo);
+            }
+        }
     }
 }
