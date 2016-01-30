@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Hand
   - PickUp
+  - HUDCanvas
+  - Bullet
+  - PickUp
   layers:
   - Default
   - TransparentFX
