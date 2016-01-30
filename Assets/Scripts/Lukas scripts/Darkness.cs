@@ -41,6 +41,7 @@ public class Darkness : MonoBehaviour {
 		if (darknessVariable < 20 && audioSrc.clip != ambientSounds [0]) {
 			audioSrc.clip = ambientSounds [0];
 			audioSrc.Play ();
+			theCamera.GetComponent<SSAOPro> ().Intensity += 5;
 		} else if (darknessVariable > 20 && darknessVariable < 50 && audioSrc.clip != ambientSounds [1]) {
 			audioSrc.clip = ambientSounds [1];
 			audioSrc.Play ();
@@ -49,6 +50,7 @@ public class Darkness : MonoBehaviour {
 			audioSrc.Play ();
 		} else if(darknessVariable > 70 && audioSrc.clip != ambientSounds [3]){
 			audioSrc.clip = ambientSounds [3];
+			theCamera.GetComponent<Wiggle> ().enabled = true;
 			audioSrc.Play ();
 		}
 
