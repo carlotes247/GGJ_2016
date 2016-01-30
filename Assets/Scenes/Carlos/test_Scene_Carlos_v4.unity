@@ -3188,9 +3188,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 919000541}
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 919000546}
+          m_MethodName: PickUpLogic
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3205,9 +3205,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 919000541}
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 919000546}
+          m_MethodName: PickUpLogic
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3246,12 +3246,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fce0f720b489a64597c6cb07df46e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectPlacementValue: 0
   pickUpLength: 1
   pickUpSpeed: 0.5
   objectInHand: 0
   playerInRange: 0
+  notPlaced: 1
+  alarmInHand: 0
+  bookInHand: 0
   objectPosition: {fileID: 919000544}
-  targetPosition: {fileID: 0}
 --- !u!54 &919000547
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7259,7 +7262,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 461094, guid: c8b7669d195ee8d4287c7791744e9448, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.7071066
+      value: -0.70710665
       objectReference: {fileID: 0}
     - target: {fileID: 461094, guid: c8b7669d195ee8d4287c7791744e9448, type: 2}
       propertyPath: m_LocalRotation.z
@@ -7267,7 +7270,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 461094, guid: c8b7669d195ee8d4287c7791744e9448, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.70710695
+      value: 0.707107
       objectReference: {fileID: 0}
     - target: {fileID: 461094, guid: c8b7669d195ee8d4287c7791744e9448, type: 2}
       propertyPath: m_RootOrder

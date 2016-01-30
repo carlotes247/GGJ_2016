@@ -21,23 +21,30 @@ public class Darkness : MonoBehaviour {
 	public Light[] environmentLights;
 
 	// Use this for initialization
-	void Start () {
+	public void InitiateCamera () {
+//		theCamera = GameObject.Find ("MainCamera");
+		theCamera = Camera.main.gameObject;
 		initSSAOIntensity = theCamera.GetComponent<SSAOPro> ().Intensity;
 		initSSAORadius = theCamera.GetComponent<SSAOPro> ().Radius;
 		initVignetteIntensity = theCamera.GetComponent<FastVignette> ().Darkness;
-		theCamera = GameObject.Find ("MainCamera");
 		audioSrc = GetComponent <AudioSource> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetKeyDown (KeyCode.O)) {
+			ResetDarkness ();
+		}
 		if (decreasing && darknessVariable < 100) {
-			print ("dcresin");
 			darknessVariable += darknessSpeed / 10 * Time.deltaTime;
-			theCamera.GetComponent<SSAOPro>().Intensity = initSSAOIntensity + maxSSAOIntensity * darknessVariable/100;
-			theCamera.GetComponent<SSAOPro>().Radius = initSSAORadius + maxSSAORadius * darknessVariable/100;
 			theCamera.GetComponent<FastVignette>().Darkness = initVignetteIntensity + maxVignetteIntensity * darknessVariable/100;
 		}
+		if (darknessVariable > 20) {
+			theCamera.GetComponent<SSAOPro> ().Intensity = initSSAOIntensity + maxSSAOIntensity * darknessVariable / 100;
+			theCamera.GetComponent<SSAOPro> ().Radius = initSSAORadius + maxSSAORadius * darknessVariable / 100;
+		}
+
+		//Audio switching
 		if (darknessVariable < 20 && audioSrc.clip != ambientSounds [0]) {
 			audioSrc.clip = ambientSounds [0];
 			audioSrc.Play ();
@@ -49,6 +56,7 @@ public class Darkness : MonoBehaviour {
 			audioSrc.Play ();
 		} else if(darknessVariable > 70 && audioSrc.clip != ambientSounds [3]){
 			audioSrc.clip = ambientSounds [3];
+			theCamera.GetComponent<Wiggle> ().enabled = true;
 			audioSrc.Play ();
 		}
 
@@ -60,5 +68,8 @@ public class Darkness : MonoBehaviour {
 	}
 	public void ResetDarkness(){
 		darknessVariable = 0;
+		theCamera.GetComponent<SSAOPro> ().Intensity = initSSAOIntensity;
+		theCamera.GetComponent<SSAOPro> ().Radius = initSSAORadius;
+		theCamera.GetComponent<FastVignette> ().Darkness = initVignetteIntensity;
 	}
 }

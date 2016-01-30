@@ -12,9 +12,10 @@ GameObject:
   - 54: {fileID: 5475854}
   - 114: {fileID: 11422452}
   - 65: {fileID: 6561282}
-  m_Layer: 0
+  - 114: {fileID: 11490626}
+  m_Layer: 8
   m_Name: floor_lamp
-  m_TagString: PickUp
+  m_TagString: FloorLamp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +29,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 462786}
   - 108: {fileID: 10850250}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +47,7 @@ GameObject:
   - 33: {fileID: 3302984}
   - 23: {fileID: 2340178}
   - 95: {fileID: 9508274}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mdl_floor_lamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.35, y: 0, z: -11.35}
+  m_LocalPosition: {x: 13.82829, y: 4.5521326, z: 9.468962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 426660}
@@ -231,12 +232,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fce0f720b489a64597c6cb07df46e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectPlacementValue: 0
   pickUpLength: 1
   pickUpSpeed: 0.5
   objectInHand: 0
   playerInRange: 0
+  notPlaced: 1
+  alarmInHand: 0
+  bookInHand: 0
   objectPosition: {fileID: 478210}
-  targetPosition: {fileID: 0}
+--- !u!114 &11490626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11422452}
+          m_MethodName: PickUpLogic
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11422452}
+          m_MethodName: PickUpLogic
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
