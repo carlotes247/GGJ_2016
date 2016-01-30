@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3336360}
   - 23: {fileID: 2330094}
   - 95: {fileID: 9531664}
-  - 65: {fileID: 6564638}
+  - 64: {fileID: 6478708}
   m_Layer: 0
   m_Name: bed
   m_TagString: Untagged
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124706}
   m_LocalRotation: {x: 0, y: -0.7071069, z: 0, w: -0.7071067}
-  m_LocalPosition: {x: -10.932, y: -5.101777e-16, z: 3.03}
+  m_LocalPosition: {x: -10.35, y: -5.101777e-16, z: 2.951}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -65,9 +65,9 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124706}
-  m_Mesh: {fileID: 4300000, guid: dd8a0da4a7257ee42bbc6be4af66fe9d, type: 3}
---- !u!65 &6564638
-BoxCollider:
+  m_Mesh: {fileID: 4300002, guid: dd8a0da4a7257ee42bbc6be4af66fe9d, type: 3}
+--- !u!64 &6478708
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -76,8 +76,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.7419999, y: 1.7499983, z: 2.7429998}
-  m_Center: {x: 0, y: 0.87499917, z: 0}
+  m_Convex: 0
+  m_Mesh: {fileID: 4300002, guid: dd8a0da4a7257ee42bbc6be4af66fe9d, type: 3}
 --- !u!95 &9531664
 Animator:
   serializedVersion: 3
