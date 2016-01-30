@@ -39,7 +39,7 @@ public class PickUpRange : MonoBehaviour {
 
 	void OnTriggerExit (Collider Exit) {
 		if (Exit.gameObject.layer == 8) { // ALl the objects that should be interactable should have a certain tag, put that tag in here. 
-			Exit.GetComponent<PickUpObjects> ().playerInRange = true;
+			Exit.GetComponent<PickUpObjects> ().playerInRange = false;
 		}
 
 
