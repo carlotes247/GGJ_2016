@@ -15,6 +15,10 @@ TagManager:
   - FloorLamp
   - Chair
   - TV
+  - GreenBook
+  - GreenBookPlacement
+  - BlueBook
+  - BlueBookPlacement
   layers:
   - Default
   - TransparentFX

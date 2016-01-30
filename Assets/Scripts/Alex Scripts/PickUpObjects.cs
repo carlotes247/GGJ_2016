@@ -7,9 +7,11 @@ public class PickUpObjects : MonoBehaviour {
 	PuzzleManager puzzleManager;
 	AudioSource audioSource;
 
-	public float objectPlacementValue;
+	public float XobjectPlacementCorr;
+	public float YobjectPlacementCorr;
 	public float pickUpLength = 1f; // The Length away from the player the object is going to be when its picked up
 	public float pickUpSpeed = 0.5f; // The Speed from its position to the players hand when it gets picked up
+	public float dropSpeed = 0.15f;
 
 	bool objectPosUpdate = true; // When the object is not picked up, this makes sure objectPosition keeps track of the objects position before being picked up
 	public bool objectInHand; // When the object is picked up
@@ -17,13 +19,16 @@ public class PickUpObjects : MonoBehaviour {
 	public bool notPlaced = true;
 
 	public bool alarmInHand;
-	public bool bookInHand;
+	public bool greenBookInHand;
+	public bool blueBookInHand;
+	public bool brownBookInHand;
 
 	public Transform objectPosition; // The objects current position when not in hand
 
 	// USE THIS IF YOU WANT MAKE THE OBJECT NOT ROTATE WHEN PICKED UPP
 	//public Transform targetPosition; // Where the object is going to lerp to, which is the object Hand, under the Players>Camera
 
+	Vector3 temporaryVector3;
 	Vector3 mousePosition; // Vector 3 for the camera
 
 	void Start () {
@@ -55,8 +60,12 @@ public class PickUpObjects : MonoBehaviour {
 			if (this.gameObject.tag == "AlarmClock")
 				alarmInHand = true;
 
-			/*if (this.gameObject.tag == "Book")
-				bookInHand = true;*/
+			if (this.gameObject.tag == "GreenBook")
+				greenBookInHand = true;
+
+			if (this.gameObject.tag == "BlueBook")
+				blueBookInHand = true;
+			
 			
 
 			// USE THIS WITH WIIMOTE
@@ -114,14 +123,50 @@ public class PickUpObjects : MonoBehaviour {
 			alarmInHand = false; // The AlarmClock is not in hand
 			rb.useGravity = false; // // Turns off gravity
 			rb.isKinematic = true; // Makes it kinematic so it stays there
-			audioSource.enabled = false; // Turns off its sound FX
+			audioSource.enabled = false;
 			puzzleManager.alarmPuzzle = true; // Tells the puzzle manager that the alarm puzzle is finished
+			puzzleManager.SFX = true;
 
 			// Transform the object to where it supposed to be placed, minus the Y value so its correct. The Y value can be set in the inspector for each object
-			objectPosition.position = new Vector3 (Enter.gameObject.transform.position.x, Enter.gameObject.transform.position.y - objectPlacementValue, Enter.gameObject.transform.position.z);
+			objectPosition.position = new Vector3 (Enter.gameObject.transform.position.x, Enter.gameObject.transform.position.y - YobjectPlacementCorr, Enter.gameObject.transform.position.z);
+		
 			transform.rotation = Enter.gameObject.transform.rotation; // Sets the rotation to the placement gameobjects rotation
 
 			Debug.Log ("Alarm Puzzel CLear.");
+		}
+
+		if (Enter.gameObject.tag == "GreenBookPlacement" && greenBookInHand == true) { // If the alarm is in hand and it collides with the AlarmClockPlacement object
+			notPlaced = false; // Object has been placed
+			objectInHand = false; // The object is no longer in hand
+			greenBookInHand = false; // The AlarmClock is not in hand
+			rb.useGravity = false; // // Turns off gravity
+			rb.isKinematic = true; // Makes it kinematic so it stays there
+			audioSource.enabled = false;
+			puzzleManager.greenBookPuzzle = true; // Tells the puzzle manager that the alarm puzzle is finished
+			puzzleManager.SFX = true;
+
+			// Transform the object to where it supposed to be placed, minus the Y value so its correct. The Y value can be set in the inspector for each object
+			objectPosition.position = new Vector3 (Enter.gameObject.transform.position.x + XobjectPlacementCorr, Enter.gameObject.transform.position.y - YobjectPlacementCorr, Enter.gameObject.transform.position.z);
+			transform.rotation = Enter.gameObject.transform.rotation; // Sets the rotation to the placement gameobjects rotation
+
+			Debug.Log ("GreenBook Puzzel CLear.");
+		}
+
+		if (Enter.gameObject.tag == "BlueBookPlacement" && blueBookInHand == true) { // If the alarm is in hand and it collides with the AlarmClockPlacement object
+			notPlaced = false; // Object has been placed
+			objectInHand = false; // The object is no longer in hand
+			blueBookInHand = false; // The AlarmClock is not in hand
+			rb.useGravity = false; // // Turns off gravity
+			rb.isKinematic = true; // Makes it kinematic so it stays there
+			audioSource.enabled = false;
+			puzzleManager.blueBookPuzzle = true; // Tells the puzzle manager that the alarm puzzle is finished
+			puzzleManager.SFX = true;
+
+			// Transform the object to where it supposed to be placed, minus the Y value so its correct. The Y value can be set in the inspector for each object
+			objectPosition.position = new Vector3 (Enter.gameObject.transform.position.x + XobjectPlacementCorr, Enter.gameObject.transform.position.y - YobjectPlacementCorr, Enter.gameObject.transform.position.z);
+			transform.rotation = Enter.gameObject.transform.rotation; // Sets the rotation to the placement gameobjects rotation
+
+			Debug.Log ("BlueBook Puzzel CLear.");
 		}
 	}
 }

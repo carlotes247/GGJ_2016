@@ -7,11 +7,16 @@ ModelImporter:
   fileIDToRecycleName:
     100000: pasted__plate
     100002: //RootNode
+    100004: polySurface12
     400000: pasted__plate
     400002: //RootNode
+    400004: polySurface12
     2300000: pasted__plate
+    2300002: polySurface12
     3300000: pasted__plate
+    3300002: polySurface12
     4300000: pasted__plate
+    4300002: polySurface12
   materials:
     importMaterials: 1
     materialName: 0

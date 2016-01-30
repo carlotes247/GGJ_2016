@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Mario/BuildScene.unity
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/Carlos/test_Scene_Carlos_MainMenu.unity
+=======
+    path: Assets/Scenes/Alex/BuildTestScene.unity
+  - enabled: 0
+    path: Assets/Scenes/Lukas/test.unity
+>>>>>>> ba917cf29122d956c42d77953262ffcc0600adf8
