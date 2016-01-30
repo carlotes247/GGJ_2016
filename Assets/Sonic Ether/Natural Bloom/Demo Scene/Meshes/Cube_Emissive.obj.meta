@@ -1,20 +1,21 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 9ac3f642ffd9b4a41a17b127cb74835b
-timeCreated: 1454176212
-=======
-guid: febbf3ed0111e544c93d83aa3d76f0d4
-timeCreated: 1454164185
->>>>>>> e5d23b15d26c352cfe73777d954e0164c0b49160
-licenseType: Free
+guid: 49df41193bdd8be4d871b258a7124548
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: pSphere1
+    100000: Cube2_polySurface3_Cube_pCube26 polySurface2 polySurface3
+    100002: //RootNode
+    100004: Cube2_polySurface3_Cube_pCube26_polySurface2_polySurface3
+    400000: Cube2_polySurface3_Cube_pCube26 polySurface2 polySurface3
+    400002: //RootNode
+    400004: Cube2_polySurface3_Cube_pCube26_polySurface2_polySurface3
+    2300000: Cube2_polySurface3_Cube_pCube26 polySurface2 polySurface3
+    2300002: Cube2_polySurface3_Cube_pCube26_polySurface2_polySurface3
+    3300000: Cube2_polySurface3_Cube_pCube26 polySurface2 polySurface3
+    3300002: Cube2_polySurface3_Cube_pCube26_polySurface2_polySurface3
+    4300000: Cube2_polySurface3_Cube_pCube26 polySurface2 polySurface3
+    4300002: Cube2_polySurface3_Cube_pCube26_polySurface2_polySurface3
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -39,7 +40,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.5
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -53,11 +54,11 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 3
+    tangentImportMode: 4
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -73,7 +74,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

@@ -16870,8 +16870,8 @@ Transform:
   m_PrefabParentObject: {fileID: 496504, guid: f67afe5b25b940e488ed22cf38ea8b27, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1328465134}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalRotation: {x: 0.5307496, y: 0, z: 0, w: 0.84752876}
+  m_LocalPosition: {x: 0, y: 0.79999995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 252183644}
@@ -20862,19 +20862,19 @@ Prefab:
     - target: {fileID: 11446150, guid: 4aa424b83523bc94a88490fab3e34021, type: 2}
       propertyPath: ambientSounds.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: ce20206681570c04aaf3f6ac140e661f, type: 3}
+      objectReference: {fileID: 8300000, guid: 27b908a837e21fb4280329b9e3752f5e, type: 3}
     - target: {fileID: 11446150, guid: 4aa424b83523bc94a88490fab3e34021, type: 2}
       propertyPath: ambientSounds.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 090c43b7430091a47b0491144adc3e6a, type: 3}
+      objectReference: {fileID: 8300000, guid: c8ad12d675501c245b17819582ecd658, type: 3}
     - target: {fileID: 11446150, guid: 4aa424b83523bc94a88490fab3e34021, type: 2}
       propertyPath: ambientSounds.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: 0534b19cbf933d84a96d6647fc9acf6d, type: 3}
+      objectReference: {fileID: 8300000, guid: b85f0c737d272c74aa8ea88d0be5a75a, type: 3}
     - target: {fileID: 11446150, guid: 4aa424b83523bc94a88490fab3e34021, type: 2}
       propertyPath: ambientSounds.Array.data[3]
       value: 
-      objectReference: {fileID: 8300000, guid: 2bec9d4f191d431408eb41054ded1c12, type: 3}
+      objectReference: {fileID: 8300000, guid: 3a3863bec51431644b92cdefe55da710, type: 3}
     - target: {fileID: 8213428, guid: 4aa424b83523bc94a88490fab3e34021, type: 2}
       propertyPath: spreadCustomCurve.m_RotationOrder
       value: 0

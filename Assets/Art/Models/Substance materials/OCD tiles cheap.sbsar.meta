@@ -1,10 +1,6 @@
 fileFormatVersion: 2
-guid: fc515573dc2ac704b82bc50724bad326
-<<<<<<< HEAD
-timeCreated: 1454164752
-=======
-timeCreated: 1454174617
->>>>>>> e5d23b15d26c352cfe73777d954e0164c0b49160
+guid: 7798dbf40227ccb49ba305cdd13145fb
+timeCreated: 1454175878
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -19,7 +15,7 @@ SubstanceImporter:
     inputs:
     - name: OCD_mask
       value:
-        scalar[0]: 0
+        scalar[0]: 1
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -54,11 +50,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Tiles_ammount
       value:
-<<<<<<< HEAD
-        scalar[0]: 9.7
-=======
-        scalar[0]: 3.4
->>>>>>> e5d23b15d26c352cfe73777d954e0164c0b49160
+        scalar[0]: 3
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -82,13 +74,6 @@ SubstanceImporter:
         scalar[0]: 0.27451
         scalar[1]: 0.278431
         scalar[2]: 0.278431
-        scalar[3]: 0
-        texture: {instanceID: 0}
-    - name: OCD_color
-      value:
-        scalar[0]: 0.8897059
-        scalar[1]: 0.09158735
-        scalar[2]: 0.09158735
         scalar[3]: 0
         texture: {instanceID: 0}
     materialInformation:
@@ -118,13 +103,6 @@ SubstanceImporter:
         data:
           first:
             name: _DetailNormalMap
-          second:
-            texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
-            offset: {x: 0, y: 0}
-        data:
-          first:
-            name: _MetallicGlossMap
           second:
             texture: {instanceID: 0}
             scale: {x: 1, y: 1}
@@ -164,6 +142,13 @@ SubstanceImporter:
             texture: {instanceID: 0}
             scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _MetallicGlossMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
       floats:
         data:
           first:
@@ -179,6 +164,10 @@ SubstanceImporter:
           second: 0.5
         data:
           first:
+            name: _Parallax
+          second: 0.02
+        data:
+          first:
             name: _ZWrite
           second: 1
         data:
@@ -187,16 +176,8 @@ SubstanceImporter:
           second: 0.5
         data:
           first:
-            name: _Metallic
-          second: 0
-        data:
-          first:
             name: _BumpScale
           second: 1
-        data:
-          first:
-            name: _Parallax
-          second: 0.02
         data:
           first:
             name: _OcclusionStrength
@@ -212,6 +193,10 @@ SubstanceImporter:
         data:
           first:
             name: _Mode
+          second: 0
+        data:
+          first:
+            name: _Metallic
           second: 0
       colors:
         data:
@@ -238,11 +223,6 @@ SubstanceImporter:
       filterMode: 1
       aniso: 1
       wrapMode: 0
-    - name: Tiles_floor_roughness
-      alphaSource: 0
-      filterMode: 1
-      aniso: 1
-      wrapMode: 0
     textureAssignments:
     - shaderProp:
         name: _MainTex
@@ -262,7 +242,7 @@ SubstanceImporter:
       textureWidth: 512
       textureHeight: 512
       textureFormat: 0
-      loadingBehavior: 2
+      loadingBehavior: 1
   deletedPrototypes: []
   userData: 
   assetBundleName: 
