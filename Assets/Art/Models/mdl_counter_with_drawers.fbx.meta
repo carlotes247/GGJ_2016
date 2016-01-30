@@ -1,19 +1,15 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Art/Models/mdl_wardrobe_door_left.fbx.meta
-guid: 63f8a230920e7cc4cbc3ac60e9f29ebb
-=======
-guid: 4ddf3f65aca6269438e4e1f014d0c899
->>>>>>> f9e489b73e1e7746d439bb0f93fb15d2aa04f4de:Assets/Sonic Ether/Natural Bloom/Demo Scene/Meshes/icos.obj.meta
+guid: 51bdf0eee90657d41bb9ab25c94605dd
+timeCreated: 1454164685
+licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: pSolid1
     400000: //RootNode
-    400002: pSolid1
-    2300000: pSolid1
-    3300000: pSolid1
-    4300000: pSolid1
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: counter_drawers1
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -39,7 +35,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -53,15 +49,11 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-<<<<<<< HEAD:Assets/Art/Models/mdl_wardrobe_door_left.fbx.meta
     tangentImportMode: 3
-=======
-    tangentImportMode: 4
->>>>>>> f9e489b73e1e7746d439bb0f93fb15d2aa04f4de:Assets/Sonic Ether/Natural Bloom/Demo Scene/Meshes/icos.obj.meta
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
