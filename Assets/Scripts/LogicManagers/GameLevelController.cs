@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using ReusableMethods;
-
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Controls all logic related to the game levels, how to transit them and store them
@@ -21,6 +21,12 @@ public class GameLevelController : MonoBehaviour {
     /// (Property) The current level we are in
     /// </summary>
     public int IndexCurrentLevel { get { return this.indexCurrentLevel; } set { this.indexCurrentLevel = value; } }
+
+    /// <summary>
+    /// (Field) The object containing the loading scene
+    /// </summary>
+    [SerializeField]
+    private GameObject m_LoadingScreen;
 
 	// Use this for initialization
 	void Start () {
@@ -92,6 +98,33 @@ public class GameLevelController : MonoBehaviour {
 
         
 
+    }
+
+    /// <summary>
+    /// Loads the scene depending on the index passed in
+    /// </summary>
+    /// <param name="index"> The index of the level to load</param>
+    public void LoadScene (int index)
+    {
+        ShowLoadingScreen(true);
+        SceneManager.LoadScene(index);
+        ShowLoadingScreen(false);
+    }
+
+    /// <summary>
+    /// Shows the loading screen depending on the value passed in
+    /// </summary>
+    /// <param name="value"> The value to show the loading screen. True for showing</param>
+    public void ShowLoadingScreen (bool value)
+    {
+        if (value)
+        {
+            m_LoadingScreen.SetActive(true);
+        }
+        else
+        {
+            m_LoadingScreen.SetActive(false);
+        }
     }
 
 }

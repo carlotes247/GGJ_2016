@@ -111,6 +111,16 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public MenuController MenuController { get { return this.m_MenuController; } }
 
+    /// <summary>
+    /// (Field) The GameLevelController
+    /// </summary>
+    [SerializeField]
+    private GameLevelController m_GameLevelController;
+    /// <summary>
+    /// (Property) The GameLevelController
+    /// </summary>
+    public GameLevelController GameLevelController { get { return this.m_GameLevelController; } }
+
 
     #endregion
 

@@ -89,6 +89,11 @@ public class InputController : MonoBehaviour {
     [SerializeField]
     private Vector2 m_RotationCamera;
     /// <summary>
+    /// (Property) The rotation of the camera in eulerAngles
+    /// </summary>
+    public Vector2 RotationCamera { get { return this.m_RotationCamera; } set { this.m_RotationCamera = value; } }
+
+    /// <summary>
     /// (Field) The Axis of the camera scalated to (-1, 1)
     /// </summary>
     private Vector2 m_CameraAxis;
@@ -316,6 +321,26 @@ public class InputController : MonoBehaviour {
             //Camera.main.transform.eulerAngles = m_RotationCamera;
             //Toolbox.Instance.GameManager.Player.ObjectTransform.LookAt()
         }
+    }
+
+    /// <summary>
+    /// Resets the rotation of the player and the camera to zero
+    /// </summary>
+    public void RestartRotationCameraPlayer ()
+    {
+        // We set the rotation to zero
+        m_RotationCamera = Vector2.zero;
+
+        // We rotate the player on the X axis only
+        Toolbox.Instance.GameManager.Player.ObjectTransform.eulerAngles = new Vector3(
+            Toolbox.Instance.GameManager.Player.ObjectTransform.eulerAngles.x,
+            m_RotationCamera.y,
+            Toolbox.Instance.GameManager.Player.ObjectTransform.eulerAngles.z);
+        // We then rotate the camera on the Y axis
+        Camera.main.transform.eulerAngles = new Vector3(
+            m_RotationCamera.x,
+            Camera.main.transform.eulerAngles.y,
+            Camera.main.transform.eulerAngles.z);
     }
 
     
