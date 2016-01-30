@@ -13,12 +13,23 @@ ModelImporter:
     400002: wardrobe
     400004: wardrobe_door_left
     400006: wardrobe_door_right
+<<<<<<< HEAD
     2300000: wardrobe
     2300002: wardrobe_door_left
     2300004: wardrobe_door_right
     3300000: wardrobe
     3300002: wardrobe_door_left
     3300004: wardrobe_door_right
+=======
+    2300000: //RootNode
+    2300002: wardrobe
+    2300004: wardrobe_door_left
+    2300006: wardrobe_door_right
+    3300000: //RootNode
+    3300002: wardrobe
+    3300004: wardrobe_door_left
+    3300006: wardrobe_door_right
+>>>>>>> 399b2194523fbdc17969247e5eda93ee02aeff90
     4300000: wardrobe
     4300002: wardrobe_door_left
     4300004: wardrobe_door_right

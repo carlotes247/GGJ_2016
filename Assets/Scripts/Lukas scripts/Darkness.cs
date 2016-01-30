@@ -15,6 +15,9 @@ public class Darkness : MonoBehaviour {
 	public float maxVignetteIntensity;
 	float initVignetteIntensity;
 
+	public AudioClip[] ambientSounds;
+	AudioSource audioSrc;
+
 	public Light[] environmentLights;
 
 	// Use this for initialization
@@ -23,6 +26,7 @@ public class Darkness : MonoBehaviour {
 		initSSAORadius = theCamera.GetComponent<SSAOPro> ().Radius;
 		initVignetteIntensity = theCamera.GetComponent<FastVignette> ().Darkness;
 		theCamera = GameObject.Find ("MainCamera");
+		audioSrc = GetComponent <AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -34,12 +38,27 @@ public class Darkness : MonoBehaviour {
 			theCamera.GetComponent<SSAOPro>().Radius = initSSAORadius + maxSSAORadius * darknessVariable/100;
 			theCamera.GetComponent<FastVignette>().Darkness = initVignetteIntensity + maxVignetteIntensity * darknessVariable/100;
 		}
-
+		if (darknessVariable < 20) {
+			audioSrc.clip = ambientSounds [0];
+			audioSrc.Play ();
+		} else if (darknessVariable < 50) {
+			audioSrc.clip = ambientSounds [1];
+			audioSrc.Play ();
+		} else if (darknessVariable < 70) {
+			audioSrc.clip = ambientSounds [2];
+			audioSrc.Play ();
+		} else {
+			audioSrc.clip = ambientSounds [3];
+			audioSrc.Play ();
+		}
 
 		if (environmentLights.Length > 0) {
 			foreach (Light light in environmentLights) {
 				light.intensity = darknessVariable;
 			}
 		}
+	}
+	public void ResetDarkness(){
+		darknessVariable = 0;
 	}
 }
