@@ -1,38 +1,29 @@
 fileFormatVersion: 2
 guid: 7e24639ac72eb3e43ab084c2e5277fc5
-timeCreated: 1454163019
+timeCreated: 1454166344
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: wardrobe
-    100004: wardrobe_door_left
-    100006: wardrobe_door_right
-    100008: left_door
-    100010: right_door
+    100002: pasted__group1
+    100004: pasted__left_door
+    100006: pasted__right_door
+    100008: pasted__wardrobe
     400000: //RootNode
-    400002: wardrobe
-    400004: wardrobe_door_left
-    400006: wardrobe_door_right
-    400008: left_door
-    400010: right_door
-    2300000: wardrobe
-    2300002: wardrobe_door_left
-    2300004: wardrobe_door_right
-    2300006: left_door
-    2300008: right_door
-    3300000: wardrobe
-    3300002: wardrobe_door_left
-    3300004: wardrobe_door_right
-    3300006: left_door
-    3300008: right_door
-    4300000: wardrobe
-    4300002: wardrobe_door_left
-    4300004: wardrobe_door_right
-    4300006: right_door
-    4300008: left_door
-    9500000: //RootNode
+    400002: pasted__group1
+    400004: pasted__left_door
+    400006: pasted__right_door
+    400008: pasted__wardrobe
+    2300000: pasted__left_door
+    2300002: pasted__right_door
+    2300004: pasted__wardrobe
+    3300000: pasted__left_door
+    3300002: pasted__right_door
+    3300004: pasted__wardrobe
+    4300000: pasted__right_door
+    4300002: pasted__left_door
+    4300004: pasted__wardrobe
   materials:
     importMaterials: 1
     materialName: 0
@@ -91,7 +82,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
