@@ -4643,7 +4643,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105164}
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &3387454
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -5637,8 +5637,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2, z: 1}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6572174
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -8873,6 +8873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenPointerPos: {x: 0, y: 0, z: 0}
+  m_ControllerAxis: {x: 0, y: 0}
   wiimoteInput: {fileID: 11475540}
   inputType: 1
   m_DelayBetweenShots: 0.1
@@ -13319,10 +13320,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectManager: {fileID: 11401470}
   navMAgent: {fileID: 0}
-  typeOfMovement: 0
+  typeOfMovement: 2
   positionToMove: {x: 0, y: 0, z: 0}
   stopRadius: 0
-  maxVelocity: 0
+  maxVelocity: 0.1
   forceToApply: 0
   multiplierForceToStop: 0
   initialDistanceToPoint: 0

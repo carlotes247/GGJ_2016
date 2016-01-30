@@ -34,6 +34,16 @@ public class InputController : MonoBehaviour {
     // Property
     public Vector3 ScreenPointerPos { get { return this.screenPointerPos; } set { this.screenPointerPos = value; } }
 
+    /// <summary>
+    /// (Field) The axis that the actual controller is returning
+    /// </summary>
+    [SerializeField]
+    private Vector2 m_ControllerAxis;
+    /// <summary>
+    /// (Property) The axis that the actual controller is returning
+    /// </summary>
+    public Vector2 ControllerAxis { get { return this.m_ControllerAxis; } }
+
     /// The Wiimote Input received by the computer
     // Field
     [SerializeField]
@@ -96,6 +106,8 @@ public class InputController : MonoBehaviour {
         CheckInputType();
         // We update the values of the screenPointerPos
         UpdateScreenPointerPos();
+        // We update the values of the controllerAxis
+        UpdateControllerAxis();
         // We draw the pointer in the specified pos
         DrawScreenPointer(ScreenPointerPos);
         // We check if the user press any buttons
@@ -136,6 +148,59 @@ public class InputController : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Updates the values of the controller Axis
+    /// </summary>
+    private void UpdateControllerAxis ()
+    {
+        switch (InputType)
+        {
+            case TypeOfInput.Mouse:
+                // We get the input from the keyboard
+                UpdateAxisWASD();
+                break;
+            case TypeOfInput.WiiMote:
+                // We get the input from the WiimoteNunchuck
+                m_ControllerAxis = WiimoteInput.NunchuckJoystickValues;
+                break;
+            default:
+                break;
+        }
+    }
+    /// <summary>
+    /// Updates the ControllerAxis from the WASD keys in the keyboard
+    /// </summary>
+    private void UpdateAxisWASD ()
+    {
+        // We get the input from the keyboard
+        // X axis
+        if (Input.GetKey(KeyCode.D))
+        {
+            m_ControllerAxis.x = 1;
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            m_ControllerAxis.x = -1;
+        }
+        else
+        {
+            m_ControllerAxis.x = 0;
+        }
+        // Y axis
+        if (Input.GetKey(KeyCode.W))
+        {
+            m_ControllerAxis.y = 1;
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            m_ControllerAxis.y = -1;
+        }
+        else
+        {
+            m_ControllerAxis.y = 0;
+        }
+    }
+
     /// The function in charge of Drawing on Screen a pointer (can be used by the any source of input, including mouse, Wiimote, PSMove, etc)
     void DrawScreenPointer(Vector3 values)
     {
@@ -147,9 +212,12 @@ public class InputController : MonoBehaviour {
         Toolbox.Instance.GameManager.HudController.InGameCursor.transform.position = new Vector3(value_x, value_y, 0);
     }
 
-    /// The function to check User the user Input
+    /// <summary>
+    /// The function to check the user Input
+    /// </summary>
     private void CheckUserInput()
     {
+        // We check for main click input
         if (Input.GetMouseButtonDown(0) || WiimoteInput.ButtonB && (m_Timer.GenericCountDown(m_DelayBetweenShots)) )
         {
             if (!Toolbox.Instance.GameManager.MenuController.MenuOpen)
@@ -163,6 +231,14 @@ public class InputController : MonoBehaviour {
                     WiimoteInput.SetWiimoteRumble(0, WiimoteInput.TimeToRumble);  
                 }
             }
+        }
+
+        // If the player can move from the inputController...
+        if (Toolbox.Instance.GameManager.Player.MovementController.TypeOfMovement == MovementController.TypeOfMovementEnum.InputController)
+        {
+            // ... We move the player according to the axis
+            Toolbox.Instance.GameManager.Player.MovementController.MoveInputController(m_ControllerAxis,
+                Toolbox.Instance.GameManager.Player.MovementController.MaxVelocity); 
         }
     }
 
