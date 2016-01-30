@@ -13,6 +13,8 @@ GameObject:
   - 65: {fileID: 6551754}
   - 54: {fileID: 5432734}
   - 114: {fileID: 11440900}
+  - 82: {fileID: 8290696}
+  - 114: {fileID: 11468084}
   m_Layer: 8
   m_Name: alarm clock
   m_TagString: AlarmClock
@@ -26,8 +28,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153272}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.457, y: 4.733, z: 6.159}
+  m_LocalRotation: {x: 0, y: 0.79335344, z: 0, w: 0.6087614}
+<<<<<<< HEAD
+  m_LocalPosition: {x: -0.579, y: 5.426, z: 7.177}
+=======
+  m_LocalPosition: {x: -0.62, y: 4.643, z: 6.036}
+>>>>>>> bf9925fabd4d14ad86cd0418e89647c8e824e3bf
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -42,7 +48,10 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 5823ba208c18ee54fa92c04b8404b061, type: 2}
+  - {fileID: 1155672964, guid: 7ca99551318116245afab65730ce7a0d, type: 3}
+  - {fileID: 1155672964, guid: f7f8f0a9361104b48b45504a9b5d9fe5, type: 3}
+  - {fileID: 1155672964, guid: ea2105cec7712cd4d9ecdedce7c8621b, type: 3}
+  - {fileID: 1155672964, guid: 7ca99551318116245afab65730ce7a0d, type: 3}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -64,7 +73,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153272}
-  m_Mesh: {fileID: 4300000, guid: 7ab28eb87bade0541bd411b8eee9b26b, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 55c9aecdd2885c0419b279a76c126256, type: 3}
 --- !u!54 &5432734
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -92,6 +101,80 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.24349937, y: 0.28635284, z: 0.12196337}
   m_Center: {x: 0.0000000037252903, y: 0.14317642, z: -0.009315608}
+--- !u!82 &8290696
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153272}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 13d909c34987e0540bccafc09d7f89b7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.05
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  Priority: 1
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &11440900
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,6 +195,53 @@ MonoBehaviour:
   alarmInHand: 0
   bookInHand: 0
   objectPosition: {fileID: 468912}
+--- !u!114 &11468084
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11440900}
+          m_MethodName: PickUpLogic
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11440900}
+          m_MethodName: PickUpLogic
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

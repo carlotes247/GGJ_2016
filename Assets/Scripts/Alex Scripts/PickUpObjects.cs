@@ -78,13 +78,13 @@ public class PickUpObjects : MonoBehaviour {
 		}
 	}
 
-	public void OnMouseDown() {
-		PickUpLogic ();
+	//public void OnMouseDown() {
+	//	PickUpLogic ();
 
-		// OLD, CAN BE USED WITH MOUSE
-		/*if (playerInRange == true && notPlaced == true) // If the player is within range and the object has not been placed. 
-			objectInHand = true;*/
-	}
+	//	// OLD, CAN BE USED WITH MOUSE
+	//	/*if (playerInRange == true && notPlaced == true) // If the player is within range and the object has not been placed. 
+	//		objectInHand = true;*/
+	//}
 
 	public void PickUpLogic() {
 		if (objectInHand == false) {
@@ -97,15 +97,15 @@ public class PickUpObjects : MonoBehaviour {
 		}
 	}
 
-	public void OnMouseUp() {
-		PickUpLogic ();
+	//public void OnMouseUp() {
+	//	PickUpLogic ();
 
-		// OLD, CAN BE USED WITH MOUSE
-		/*objectPosUpdate = true;
-		objectInHand = false; 
-		rb.useGravity = true; // If you drop the object, the gravity is activated again. */
+	//	// OLD, CAN BE USED WITH MOUSE
+	//	/*objectPosUpdate = true;
+	//	objectInHand = false; 
+	//	rb.useGravity = true; // If you drop the object, the gravity is activated again. */
 
-	}
+	//}
 
 	void OnTriggerEnter(Collider Enter) {
 		if (Enter.gameObject.tag == "AlarmClockPlacement" && alarmInHand == true) { // If the alarm is in hand and it collides with the AlarmClockPlacement object
@@ -114,8 +114,9 @@ public class PickUpObjects : MonoBehaviour {
 			alarmInHand = false; // The AlarmClock is not in hand
 			rb.useGravity = false; // // Turns off gravity
 			rb.isKinematic = true; // Makes it kinematic so it stays there
-			audioSource.enabled = false; // Turns off its sound FX
+			audioSource.enabled = false;
 			puzzleManager.alarmPuzzle = true; // Tells the puzzle manager that the alarm puzzle is finished
+			puzzleManager.SFX = true;
 
 			// Transform the object to where it supposed to be placed, minus the Y value so its correct. The Y value can be set in the inspector for each object
 			objectPosition.position = new Vector3 (Enter.gameObject.transform.position.x, Enter.gameObject.transform.position.y - objectPlacementValue, Enter.gameObject.transform.position.z);

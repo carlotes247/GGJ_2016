@@ -3,23 +3,25 @@ guid: 7e24639ac72eb3e43ab084c2e5277fc5
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: left_door
-    100002: //RootNode
-    100004: right_door
-    100006: wardrobe
-    400000: left_door
-    400002: //RootNode
-    400004: right_door
-    400006: wardrobe
-    2300000: left_door
-    2300002: right_door
-    2300004: wardrobe
-    3300000: left_door
-    3300002: right_door
-    3300004: wardrobe
-    4300000: wardrobe
-    4300002: right_door
-    4300004: left_door
+    100000: //RootNode
+    100002: pasted__group1
+    100004: pasted__left_door
+    100006: pasted__right_door
+    100008: pasted__wardrobe
+    400000: //RootNode
+    400002: pasted__group1
+    400004: pasted__left_door
+    400006: pasted__right_door
+    400008: pasted__wardrobe
+    2300000: pasted__left_door
+    2300002: pasted__right_door
+    2300004: pasted__wardrobe
+    3300000: pasted__left_door
+    3300002: pasted__right_door
+    3300004: pasted__wardrobe
+    4300000: pasted__right_door
+    4300002: pasted__left_door
+    4300004: pasted__wardrobe
     9500000: //RootNode
   materials:
     importMaterials: 1

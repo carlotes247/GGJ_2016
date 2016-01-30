@@ -42,7 +42,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   Priority: 128
@@ -91,7 +91,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -121,10 +121,10 @@ MonoBehaviour:
   maxSSAORadius: 1.1
   maxVignetteIntensity: 35
   ambientSounds:
-  - {fileID: 8300000, guid: 9c4b329eca50b6942bd85ba7d61f3542, type: 3}
-  - {fileID: 8300000, guid: 56094e6a0f83b00499573909d3eddbe3, type: 3}
-  - {fileID: 8300000, guid: e05cbbe7a12a99644b1a8d9ec9be639c, type: 3}
-  - {fileID: 8300000, guid: 17b94c36b336ce84f84831520304041e, type: 3}
+  - {fileID: 8300000, guid: 27b908a837e21fb4280329b9e3752f5e, type: 3}
+  - {fileID: 8300000, guid: c8ad12d675501c245b17819582ecd658, type: 3}
+  - {fileID: 8300000, guid: b85f0c737d272c74aa8ea88d0be5a75a, type: 3}
+  - {fileID: 8300000, guid: 3a3863bec51431644b92cdefe55da710, type: 3}
   environmentLights: []
 --- !u!1001 &100100000
 Prefab:
