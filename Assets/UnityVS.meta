@@ -2,17 +2,12 @@ fileFormatVersion: 2
 <<<<<<< HEAD
 guid: 06adb80429431c541b7451f46befe423
 folderAsset: yes
-timeCreated: 1454164576
 =======
-<<<<<<< HEAD:Assets/UnityVS.meta
-guid: 76d2035eee81d71439d1b0cb5b9d2357
-=======
-guid: 8be73b388ce271f43a80d3a458473775
->>>>>>> 5818a91f071388b69b8050e9cd6a117a15b4b310:Assets/UnityVS.meta
+guid: 79cbff5fca289754fbd0f0e5096e8873
 folderAsset: yes
-timeCreated: 1454163087
->>>>>>> 5a3f69481b9cb6724582ee39bdb8cf5014c91254
+timeCreated: 1454164109
 licenseType: Free
+>>>>>>> d78e49c8902597cfd69ad632f36af0ceac15c1db
 DefaultImporter:
   userData: 
   assetBundleName: 
