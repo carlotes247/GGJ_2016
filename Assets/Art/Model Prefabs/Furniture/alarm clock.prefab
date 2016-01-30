@@ -11,9 +11,11 @@ GameObject:
   - 33: {fileID: 3306804}
   - 23: {fileID: 2371164}
   - 65: {fileID: 6551754}
-  m_Layer: 0
+  - 54: {fileID: 5432734}
+  - 114: {fileID: 11440900}
+  m_Layer: 8
   m_Name: alarm clock
-  m_TagString: Untagged
+  m_TagString: AlarmClock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.812277, y: 0.0000000036352112, z: -5.8866634}
+  m_LocalPosition: {x: -0.457, y: 4.733, z: 6.159}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -40,7 +42,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 99ec19a771df6b64aac1575c41b0bd8c, type: 2}
+  - {fileID: 2100000, guid: 5823ba208c18ee54fa92c04b8404b061, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -63,6 +65,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153272}
   m_Mesh: {fileID: 4300000, guid: 7ab28eb87bade0541bd411b8eee9b26b, type: 3}
+--- !u!54 &5432734
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153272}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &6551754
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -75,6 +92,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.24349937, y: 0.28635284, z: 0.12196337}
   m_Center: {x: 0.0000000037252903, y: 0.14317642, z: -0.009315608}
+--- !u!114 &11440900
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fce0f720b489a64597c6cb07df46e04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPlacementValue: 0.115
+  pickUpLength: 1
+  pickUpSpeed: 0.5
+  objectInHand: 0
+  playerInRange: 0
+  notPlaced: 1
+  alarmInHand: 0
+  bookInHand: 0
+  objectPosition: {fileID: 468912}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

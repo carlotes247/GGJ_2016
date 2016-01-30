@@ -5,8 +5,12 @@ Material:
 <<<<<<< HEAD
   serializedVersion: 6
 =======
+<<<<<<< HEAD
+  serializedVersion: 6
+=======
   serializedVersion: 5
 >>>>>>> 6140b876733cac9ce16d2147b47c09319649eb84
+>>>>>>> 352a1c0ec342141db8c5e24de5e2f2f03fd82f9a
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -18,7 +22,11 @@ Material:
 <<<<<<< HEAD
   stringTagMap: {}
 =======
+<<<<<<< HEAD
+  stringTagMap: {}
+=======
 >>>>>>> 6140b876733cac9ce16d2147b47c09319649eb84
+>>>>>>> 352a1c0ec342141db8c5e24de5e2f2f03fd82f9a
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -90,11 +98,14 @@ Material:
         first:
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
           name: _Cutoff
         second: .5
       data:
         first:
 >>>>>>> 6140b876733cac9ce16d2147b47c09319649eb84
+>>>>>>> 352a1c0ec342141db8c5e24de5e2f2f03fd82f9a
           name: _SrcBlend
         second: 1
       data:
@@ -104,16 +115,22 @@ Material:
       data:
         first:
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 352a1c0ec342141db8c5e24de5e2f2f03fd82f9a
           name: _Cutoff
         second: 0.5
       data:
         first:
           name: _Parallax
         second: 0.02
+<<<<<<< HEAD
+=======
 =======
           name: _Parallax
         second: .0199999996
 >>>>>>> 6140b876733cac9ce16d2147b47c09319649eb84
+>>>>>>> 352a1c0ec342141db8c5e24de5e2f2f03fd82f9a
       data:
         first:
           name: _ZWrite
@@ -124,8 +141,12 @@ Material:
 <<<<<<< HEAD
         second: 0.5
 =======
+<<<<<<< HEAD
+        second: 0.5
+=======
         second: .5
 >>>>>>> 6140b876733cac9ce16d2147b47c09319649eb84
+>>>>>>> 352a1c0ec342141db8c5e24de5e2f2f03fd82f9a
       data:
         first:
           name: _BumpScale
@@ -152,11 +173,14 @@ Material:
         second: 0
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
       data:
         first:
           name: _EmissionScaleUI
         second: 0
 >>>>>>> 6140b876733cac9ce16d2147b47c09319649eb84
+>>>>>>> 352a1c0ec342141db8c5e24de5e2f2f03fd82f9a
     m_Colors:
       data:
         first:
@@ -168,9 +192,13 @@ Material:
 <<<<<<< HEAD
         second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 =======
+<<<<<<< HEAD
+        second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+=======
         second: {r: .5, g: .5, b: .5, a: 1}
       data:
         first:
           name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}
 >>>>>>> 6140b876733cac9ce16d2147b47c09319649eb84
+>>>>>>> 352a1c0ec342141db8c5e24de5e2f2f03fd82f9a

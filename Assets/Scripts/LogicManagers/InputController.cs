@@ -97,6 +97,12 @@ public class InputController : MonoBehaviour {
     /// </summary>
     private Vector2 CameraAxis { get { return m_CameraAxis; } set { this.m_CameraAxis = value; } }
 
+    /// <summary>
+    /// (Field) The speed of the rotation of the camera
+    /// </summary>
+    [SerializeField]
+    private float m_CameraRotationSpeed;
+
     // Use this for initialization
     void Start () {
         //WiimoteInput.WiimoteInputLogic();
@@ -245,21 +251,22 @@ public class InputController : MonoBehaviour {
     /// </summary>
     private void CheckUserInput()
     {
-        // We check for main click input
-        if (Input.GetMouseButtonDown(0) || WiimoteInput.ButtonB && (m_Timer.GenericCountDown(m_DelayBetweenShots)) )
-        {
-            if (!Toolbox.Instance.GameManager.MenuController.MenuOpen)
-            {
-                // Toolbox.Instance.GameManager.WeaponController.Shoot(Camera.main.ScreenPointToRay(ScreenPointerPos).direction);
-                Toolbox.Instance.GameManager.Player.WeaponController.Shoot(Camera.main.ScreenPointToRay(ScreenPointerPos).direction);
-                // If the wiimote is selected as the input...
-                if (InputType == TypeOfInput.WiiMote)
-                {
-                    // We rumble the wiimote of player 1
-                    WiimoteInput.SetWiimoteRumble(0, WiimoteInput.TimeToRumble);  
-                }
-            }
-        }
+        /* CODE FOR SHOOTING NOT IN THIS GAME */
+        //// We check for main click input
+        //if (Input.GetMouseButtonDown(0) || WiimoteInput.ButtonB && (m_Timer.GenericCountDown(m_DelayBetweenShots)) )
+        //{
+        //    if (!Toolbox.Instance.GameManager.MenuController.MenuOpen)
+        //    {
+        //        // Toolbox.Instance.GameManager.WeaponController.Shoot(Camera.main.ScreenPointToRay(ScreenPointerPos).direction);
+        //        Toolbox.Instance.GameManager.Player.WeaponController.Shoot(Camera.main.ScreenPointToRay(ScreenPointerPos).direction);
+        //        // If the wiimote is selected as the input...
+        //        if (InputType == TypeOfInput.WiiMote)
+        //        {
+        //            // We rumble the wiimote of player 1
+        //            WiimoteInput.SetWiimoteRumble(0, WiimoteInput.TimeToRumble);  
+        //        }
+        //    }
+        //}
 
         // Player Movement Input
         // If the player can move from the inputController...
@@ -282,10 +289,10 @@ public class InputController : MonoBehaviour {
 
             //m_YawCamera += 2f * ReusableMethods.Normalization.ScaleNormalize((ReusableMethods.Normalization.Normalize(ScreenPointerPos.x, 0, Screen.width)), -1, 1);
             //m_YawCamera += 2f * m_CameraAxis.x;
-            m_RotationCamera.y += 2f * m_CameraAxis.x;
+            m_RotationCamera.y += m_CameraRotationSpeed * m_CameraAxis.x;
             //m_PitchCamera -= 2f * ReusableMethods.Normalization.ScaleNormalize((ReusableMethods.Normalization.Normalize(ScreenPointerPos.y, 0, Screen.height)), -1, 1);
             //m_PitchCamera -= 2f * m_CameraAxis.y;
-            m_RotationCamera.x -= 2f * m_CameraAxis.y;
+            m_RotationCamera.x -= m_CameraRotationSpeed * m_CameraAxis.y;
 
             // We limit the rotation in the Y axis to 90 degrees (that is the X one in euler angles)
             if (Mathf.Abs(m_RotationCamera.x) > 90)
@@ -294,7 +301,20 @@ public class InputController : MonoBehaviour {
             }
 
             //Toolbox.Instance.GameManager.Player.ObjectTransform.eulerAngles = m_RotationCamera;
-            Camera.main.transform.eulerAngles = m_RotationCamera;
+            
+            // We rotate the player on the X axis only
+            Toolbox.Instance.GameManager.Player.ObjectTransform.eulerAngles = new Vector3 (
+                Toolbox.Instance.GameManager.Player.ObjectTransform.eulerAngles.x,
+                m_RotationCamera.y,
+                Toolbox.Instance.GameManager.Player.ObjectTransform.eulerAngles.z);
+            // We then rotate the camera on the Y axis
+            Camera.main.transform.eulerAngles = new Vector3(
+                m_RotationCamera.x, 
+                Camera.main.transform.eulerAngles.y, 
+                Camera.main.transform.eulerAngles.z);
+            //Camera.main.transform.eulerAngles = new Vector3 ();
+            //Camera.main.transform.eulerAngles = m_RotationCamera;
+            //Toolbox.Instance.GameManager.Player.ObjectTransform.LookAt()
         }
     }
 
