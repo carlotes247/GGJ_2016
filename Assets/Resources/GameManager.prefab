@@ -8884,6 +8884,7 @@ MonoBehaviour:
   wiimoteInput: {fileID: 11475540}
   inputType: 1
   m_DelayBetweenShots: 0.1
+  m_RotationCamera: {x: 0, y: 0}
 --- !u!114 &11420446
 MonoBehaviour:
   m_ObjectHideFlags: 1
