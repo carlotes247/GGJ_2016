@@ -161,7 +161,7 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 634234714}
   m_GameObject: {fileID: 46571819}
-  m_Mesh: {fileID: 4300000, guid: 5f654c1ce955bee4f80edcaaba8959bc, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 71d7beccb74f9064b903d43dfee00504, type: 3}
 --- !u!4 &46571823
 Transform:
   m_ObjectHideFlags: 0
@@ -812,7 +812,7 @@ Prefab:
     - target: {fileID: 3300000, guid: 31aebd106c4ee7d45a4816ca52d01f35, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 4300000, guid: 5f654c1ce955bee4f80edcaaba8959bc, type: 3}
+      objectReference: {fileID: 4300000, guid: 71d7beccb74f9064b903d43dfee00504, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31aebd106c4ee7d45a4816ca52d01f35, type: 3}
   m_IsPrefabParent: 0
@@ -1429,7 +1429,7 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 559203293}
   m_GameObject: {fileID: 336191951}
-  m_Mesh: {fileID: 4300000, guid: 5f654c1ce955bee4f80edcaaba8959bc, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 71d7beccb74f9064b903d43dfee00504, type: 3}
 --- !u!4 &336191955
 Transform:
   m_ObjectHideFlags: 0
@@ -1769,7 +1769,7 @@ Prefab:
     - target: {fileID: 3300000, guid: 31aebd106c4ee7d45a4816ca52d01f35, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 4300000, guid: 5f654c1ce955bee4f80edcaaba8959bc, type: 3}
+      objectReference: {fileID: 4300000, guid: 71d7beccb74f9064b903d43dfee00504, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31aebd106c4ee7d45a4816ca52d01f35, type: 3}
   m_IsPrefabParent: 0
@@ -1846,14 +1846,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fce0f720b489a64597c6cb07df46e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPlacementValue: 0
+  XobjectPlacementCorr: 0
+  YobjectPlacementCorr: 0
   pickUpLength: 1
   pickUpSpeed: 0.5
+  dropSpeed: 0.15
   objectInHand: 0
   playerInRange: 0
   notPlaced: 1
   alarmInHand: 0
-  bookInHand: 0
+  greenBookInHand: 0
+  blueBookInHand: 0
+  brownBookInHand: 0
   objectPosition: {fileID: 444685357}
 --- !u!64 &444685360
 MeshCollider:
@@ -2031,14 +2035,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fce0f720b489a64597c6cb07df46e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPlacementValue: 0.115
+  XobjectPlacementCorr: 0
+  YobjectPlacementCorr: 0
   pickUpLength: 1
   pickUpSpeed: 0.5
+  dropSpeed: 0.15
   objectInHand: 0
   playerInRange: 0
   notPlaced: 1
   alarmInHand: 0
-  bookInHand: 0
+  greenBookInHand: 0
+  blueBookInHand: 0
+  brownBookInHand: 0
   objectPosition: {fileID: 479347993}
 --- !u!54 &479347995
 Rigidbody:
@@ -2553,7 +2561,7 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 217010635}
   m_GameObject: {fileID: 546037692}
-  m_Mesh: {fileID: 4300000, guid: 5f654c1ce955bee4f80edcaaba8959bc, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 71d7beccb74f9064b903d43dfee00504, type: 3}
 --- !u!4 &546037696
 Transform:
   m_ObjectHideFlags: 0
@@ -2691,7 +2699,7 @@ Prefab:
     - target: {fileID: 3300000, guid: 31aebd106c4ee7d45a4816ca52d01f35, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 4300000, guid: 5f654c1ce955bee4f80edcaaba8959bc, type: 3}
+      objectReference: {fileID: 4300000, guid: 71d7beccb74f9064b903d43dfee00504, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31aebd106c4ee7d45a4816ca52d01f35, type: 3}
   m_IsPrefabParent: 0
@@ -2763,7 +2771,7 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 575110177}
-  m_Mesh: {fileID: 4300000, guid: bc7b763dce8c9f342968008c25ee1281, type: 3}
+  m_Mesh: {fileID: 4300002, guid: 5a96ec93803cdc44b9e731f63fc8abe3, type: 3}
 --- !u!1001 &578867733
 Prefab:
   m_ObjectHideFlags: 0
@@ -2830,7 +2838,7 @@ Prefab:
     - target: {fileID: 3300000, guid: 31aebd106c4ee7d45a4816ca52d01f35, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 4300000, guid: 5f654c1ce955bee4f80edcaaba8959bc, type: 3}
+      objectReference: {fileID: 4300000, guid: 71d7beccb74f9064b903d43dfee00504, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31aebd106c4ee7d45a4816ca52d01f35, type: 3}
   m_IsPrefabParent: 0
@@ -3107,7 +3115,7 @@ Prefab:
     - target: {fileID: 3300000, guid: 31aebd106c4ee7d45a4816ca52d01f35, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 4300000, guid: 5f654c1ce955bee4f80edcaaba8959bc, type: 3}
+      objectReference: {fileID: 4300000, guid: 71d7beccb74f9064b903d43dfee00504, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31aebd106c4ee7d45a4816ca52d01f35, type: 3}
   m_IsPrefabParent: 0
@@ -4429,14 +4437,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fce0f720b489a64597c6cb07df46e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPlacementValue: 0
+  XobjectPlacementCorr: 0
+  YobjectPlacementCorr: 0
   pickUpLength: 1
   pickUpSpeed: 0.5
+  dropSpeed: 0.15
   objectInHand: 0
   playerInRange: 0
   notPlaced: 1
   alarmInHand: 0
-  bookInHand: 0
+  greenBookInHand: 0
+  blueBookInHand: 0
+  brownBookInHand: 0
   objectPosition: {fileID: 919000544}
 --- !u!54 &919000547
 Rigidbody:
@@ -4593,14 +4605,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fce0f720b489a64597c6cb07df46e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPlacementValue: 0
+  XobjectPlacementCorr: 0
+  YobjectPlacementCorr: 0
   pickUpLength: 1
   pickUpSpeed: 0.5
+  dropSpeed: 0.15
   objectInHand: 0
   playerInRange: 0
   notPlaced: 1
   alarmInHand: 0
-  bookInHand: 0
+  greenBookInHand: 0
+  blueBookInHand: 0
+  brownBookInHand: 0
   objectPosition: {fileID: 963184599}
 --- !u!64 &963184602
 MeshCollider:
@@ -5544,7 +5560,7 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 1369274980}
   m_GameObject: {fileID: 1248713466}
-  m_Mesh: {fileID: 4300000, guid: 5f654c1ce955bee4f80edcaaba8959bc, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 71d7beccb74f9064b903d43dfee00504, type: 3}
 --- !u!4 &1248713470
 Transform:
   m_ObjectHideFlags: 0
@@ -6025,7 +6041,7 @@ Prefab:
     - target: {fileID: 3300000, guid: 31aebd106c4ee7d45a4816ca52d01f35, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 4300000, guid: 5f654c1ce955bee4f80edcaaba8959bc, type: 3}
+      objectReference: {fileID: 4300000, guid: 71d7beccb74f9064b903d43dfee00504, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31aebd106c4ee7d45a4816ca52d01f35, type: 3}
   m_IsPrefabParent: 0
@@ -6354,7 +6370,7 @@ Prefab:
     - target: {fileID: 3300000, guid: 31aebd106c4ee7d45a4816ca52d01f35, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 4300000, guid: 5f654c1ce955bee4f80edcaaba8959bc, type: 3}
+      objectReference: {fileID: 4300000, guid: 71d7beccb74f9064b903d43dfee00504, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31aebd106c4ee7d45a4816ca52d01f35, type: 3}
   m_IsPrefabParent: 0
@@ -6584,7 +6600,7 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 1896843790}
   m_GameObject: {fileID: 1437197942}
-  m_Mesh: {fileID: 4300000, guid: 5f654c1ce955bee4f80edcaaba8959bc, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 71d7beccb74f9064b903d43dfee00504, type: 3}
 --- !u!4 &1437197946
 Transform:
   m_ObjectHideFlags: 0
@@ -6845,7 +6861,7 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 578867733}
   m_GameObject: {fileID: 1503280933}
-  m_Mesh: {fileID: 4300000, guid: 5f654c1ce955bee4f80edcaaba8959bc, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 71d7beccb74f9064b903d43dfee00504, type: 3}
 --- !u!4 &1503280937
 Transform:
   m_ObjectHideFlags: 0
@@ -7773,7 +7789,7 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1717512047}
-  m_Mesh: {fileID: 4300002, guid: bc7b763dce8c9f342968008c25ee1281, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 5a96ec93803cdc44b9e731f63fc8abe3, type: 3}
 --- !u!4 &1730595479 stripped
 Transform:
   m_PrefabParentObject: {fileID: 458658, guid: 300bf94457614d44facca2fafdff0780, type: 2}
@@ -8346,7 +8362,7 @@ Prefab:
     - target: {fileID: 3300000, guid: 31aebd106c4ee7d45a4816ca52d01f35, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 4300000, guid: 5f654c1ce955bee4f80edcaaba8959bc, type: 3}
+      objectReference: {fileID: 4300000, guid: 71d7beccb74f9064b903d43dfee00504, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31aebd106c4ee7d45a4816ca52d01f35, type: 3}
   m_IsPrefabParent: 0
@@ -8482,14 +8498,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fce0f720b489a64597c6cb07df46e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPlacementValue: 0
+  XobjectPlacementCorr: 0
+  YobjectPlacementCorr: 0
   pickUpLength: 1
   pickUpSpeed: 0.5
+  dropSpeed: 0.15
   objectInHand: 0
   playerInRange: 0
   notPlaced: 1
   alarmInHand: 0
-  bookInHand: 0
+  greenBookInHand: 0
+  blueBookInHand: 0
+  brownBookInHand: 0
   objectPosition: {fileID: 1942938380}
 --- !u!64 &1942938383
 MeshCollider:
@@ -9495,7 +9515,7 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 1406850531}
   m_GameObject: {fileID: 2085549857}
-  m_Mesh: {fileID: 4300000, guid: 5f654c1ce955bee4f80edcaaba8959bc, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 71d7beccb74f9064b903d43dfee00504, type: 3}
 --- !u!4 &2085549861
 Transform:
   m_ObjectHideFlags: 0
@@ -9694,7 +9714,7 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 418697851}
   m_GameObject: {fileID: 2097448166}
-  m_Mesh: {fileID: 4300000, guid: 5f654c1ce955bee4f80edcaaba8959bc, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 71d7beccb74f9064b903d43dfee00504, type: 3}
 --- !u!4 &2097448170
 Transform:
   m_ObjectHideFlags: 0
