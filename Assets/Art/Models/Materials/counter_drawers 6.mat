@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: counter_handle 10
+  m_Name: counter_drawers 6
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -38,90 +38,42 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-<<<<<<< HEAD
           name: _ParallaxMap
-=======
-<<<<<<< HEAD
-          name: _ParallaxMap
-=======
-          name: _MetallicGlossMap
->>>>>>> c04d0e7f3fa620af8bfa099325afa6e1ec6a2d61
->>>>>>> 5dd0caa3af67a1b421ebe3884f7b3a146a0a3aba
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-<<<<<<< HEAD
           name: _OcclusionMap
-=======
-<<<<<<< HEAD
-          name: _OcclusionMap
-=======
-          name: _ParallaxMap
->>>>>>> c04d0e7f3fa620af8bfa099325afa6e1ec6a2d61
->>>>>>> 5dd0caa3af67a1b421ebe3884f7b3a146a0a3aba
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-<<<<<<< HEAD
           name: _EmissionMap
-=======
-<<<<<<< HEAD
-          name: _EmissionMap
-=======
-          name: _OcclusionMap
->>>>>>> c04d0e7f3fa620af8bfa099325afa6e1ec6a2d61
->>>>>>> 5dd0caa3af67a1b421ebe3884f7b3a146a0a3aba
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-<<<<<<< HEAD
           name: _DetailMask
-=======
-<<<<<<< HEAD
-          name: _DetailMask
-=======
-          name: _EmissionMap
->>>>>>> c04d0e7f3fa620af8bfa099325afa6e1ec6a2d61
->>>>>>> 5dd0caa3af67a1b421ebe3884f7b3a146a0a3aba
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-<<<<<<< HEAD
           name: _DetailAlbedoMap
-=======
-<<<<<<< HEAD
-          name: _DetailAlbedoMap
-=======
-          name: _DetailMask
->>>>>>> c04d0e7f3fa620af8bfa099325afa6e1ec6a2d61
->>>>>>> 5dd0caa3af67a1b421ebe3884f7b3a146a0a3aba
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-<<<<<<< HEAD
           name: _MetallicGlossMap
-=======
-<<<<<<< HEAD
-          name: _MetallicGlossMap
-=======
-          name: _DetailAlbedoMap
->>>>>>> c04d0e7f3fa620af8bfa099325afa6e1ec6a2d61
->>>>>>> 5dd0caa3af67a1b421ebe3884f7b3a146a0a3aba
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -141,19 +93,10 @@ Material:
         second: 0.5
       data:
         first:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 5dd0caa3af67a1b421ebe3884f7b3a146a0a3aba
           name: _Parallax
         second: 0.02
       data:
         first:
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c04d0e7f3fa620af8bfa099325afa6e1ec6a2d61
->>>>>>> 5dd0caa3af67a1b421ebe3884f7b3a146a0a3aba
           name: _ZWrite
         second: 1
       data:
@@ -162,30 +105,10 @@ Material:
         second: 0.5
       data:
         first:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-          name: _Metallic
-        second: 0
-      data:
-        first:
->>>>>>> c04d0e7f3fa620af8bfa099325afa6e1ec6a2d61
->>>>>>> 5dd0caa3af67a1b421ebe3884f7b3a146a0a3aba
           name: _BumpScale
         second: 1
       data:
         first:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-          name: _Parallax
-        second: 0.02
-      data:
-        first:
->>>>>>> c04d0e7f3fa620af8bfa099325afa6e1ec6a2d61
->>>>>>> 5dd0caa3af67a1b421ebe3884f7b3a146a0a3aba
           name: _OcclusionStrength
         second: 1
       data:
@@ -200,19 +123,10 @@ Material:
         first:
           name: _Mode
         second: 0
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 5dd0caa3af67a1b421ebe3884f7b3a146a0a3aba
       data:
         first:
           name: _Metallic
         second: 0
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c04d0e7f3fa620af8bfa099325afa6e1ec6a2d61
->>>>>>> 5dd0caa3af67a1b421ebe3884f7b3a146a0a3aba
     m_Colors:
       data:
         first:

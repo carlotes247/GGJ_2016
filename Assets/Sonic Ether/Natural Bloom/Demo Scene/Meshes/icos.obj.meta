@@ -1,20 +1,15 @@
 fileFormatVersion: 2
-guid: 5a96ec93803cdc44b9e731f63fc8abe3
+guid: 4ddf3f65aca6269438e4e1f014d0c899
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: pasted__pasted__sink1
-    100004: pasted__polySurface2
+    100002: pSolid1
     400000: //RootNode
-    400002: pasted__pasted__sink1
-    400004: pasted__polySurface2
-    2300000: pasted__pasted__sink1
-    2300002: pasted__polySurface2
-    3300000: pasted__pasted__sink1
-    3300002: pasted__polySurface2
-    4300000: pasted__pasted__sink1
-    4300002: pasted__polySurface2
+    400002: pSolid1
+    2300000: pSolid1
+    3300000: pSolid1
+    4300000: pSolid1
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -40,7 +35,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -54,11 +49,11 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 3
+    tangentImportMode: 4
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
