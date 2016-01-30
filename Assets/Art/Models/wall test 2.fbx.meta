@@ -1,11 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Art/Models/mdl_fridge.fbx.meta
-guid: 1564b8450d2df4b4cbaebe2b1b5c2b8f
-timeCreated: 1454165350
-=======
-guid: 9ef2a88d5cded4b439533edb77a55a70
-timeCreated: 1454165211
->>>>>>> bf9925fabd4d14ad86cd0418e89647c8e824e3bf:Assets/Art/Models/wall test 2.fbx.meta~5a3f69481b9cb6724582ee39bdb8cf5014c91254
+guid: 215e38ade36b6ad40b624a09b00cb982
+timeCreated: 1454164358
 licenseType: Free
 ModelImporter:
   serializedVersion: 19

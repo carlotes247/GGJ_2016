@@ -1,11 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Art/Models/mdl_fridge.fbx.meta
-guid: 1564b8450d2df4b4cbaebe2b1b5c2b8f
-timeCreated: 1454165350
-=======
-guid: 9ef2a88d5cded4b439533edb77a55a70
-timeCreated: 1454165211
->>>>>>> bf9925fabd4d14ad86cd0418e89647c8e824e3bf:Assets/Art/Models/wall test 2.fbx.meta~5a3f69481b9cb6724582ee39bdb8cf5014c91254
+guid: 1d0c26712369fe743b6adbc2cc96b291
+timeCreated: 1454167962
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -14,7 +9,8 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pCube33
+    4300000: sink1
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -73,7 +69,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

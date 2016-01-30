@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 9f22abbb7422e574d89fe7becc0943ed
-timeCreated: 1454152554
+guid: 1162fe3f81ea1d449a1a44528177a437
+timeCreated: 1454169796
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -43,14 +43,14 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Tiles_ammount
       value:
-        scalar[0]: 1.4
+        scalar[0]: 2.6
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
     - name: Cracks_withdt
       value:
-        scalar[0]: 0.99
+        scalar[0]: 1.2
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -72,7 +72,7 @@ SubstanceImporter:
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
-      scale: {x: 5, y: 5}
+      scale: {x: 2, y: 2}
       generateMipmaps: 1
       generateAllOutputs: 0
       animationUpdateRate: 0
@@ -84,14 +84,14 @@ SubstanceImporter:
             name: _MainTex
           second:
             texture: {instanceID: 0}
-            scale: {x: 5, y: 5}
+            scale: {x: 2, y: 2}
             offset: {x: 0, y: 0}
         data:
           first:
             name: _BumpMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 5, y: 1}
+            scale: {x: 2, y: 1}
             offset: {x: 0, y: 0}
         data:
           first:
@@ -119,7 +119,7 @@ SubstanceImporter:
             name: _EmissionMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 5, y: 5}
+            scale: {x: 2, y: 2}
             offset: {x: 0, y: 0}
         data:
           first:
@@ -140,7 +140,7 @@ SubstanceImporter:
             name: _MetallicGlossMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 5, y: 1}
+            scale: {x: 2, y: 1}
             offset: {x: 0, y: 0}
       floats:
         data:

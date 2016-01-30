@@ -841,7 +841,7 @@ GameObject:
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &130562
 GameObject:
   m_ObjectHideFlags: 1
@@ -8894,10 +8894,10 @@ MonoBehaviour:
   screenPointerPos: {x: 0, y: 0, z: 0}
   m_ControllerAxis: {x: 0, y: 0}
   wiimoteInput: {fileID: 11475540}
-  inputType: 0
+  inputType: 1
   m_DelayBetweenShots: 0.1
   m_RotationCamera: {x: 0, y: 0}
-  m_CameraRotationSpeed: 5
+  m_CameraRotationSpeed: 2
 --- !u!114 &11420446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13435,7 +13435,7 @@ MonoBehaviour:
   typeOfMovement: 2
   positionToMove: {x: 0, y: 0, z: 0}
   stopRadius: 0
-  maxVelocity: 0.1
+  maxVelocity: 0.05
   forceToApply: 0
   multiplierForceToStop: 0
   initialDistanceToPoint: 0
