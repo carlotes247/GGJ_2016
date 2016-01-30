@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: fc515573dc2ac704b82bc50724bad326
-timeCreated: 1454163554
+timeCreated: 1454174617
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -15,7 +15,7 @@ SubstanceImporter:
     inputs:
     - name: OCD_mask
       value:
-        scalar[0]: -0.259
+        scalar[0]: 0
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -50,7 +50,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Tiles_ammount
       value:
-        scalar[0]: 3
+        scalar[0]: 3.4
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -78,9 +78,9 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: OCD_color
       value:
-        scalar[0]: 0.52549
-        scalar[1]: 0.0588235
-        scalar[2]: 0.0745098
+        scalar[0]: 0.8897059
+        scalar[1]: 0.09158735
+        scalar[2]: 0.09158735
         scalar[3]: 0
         texture: {instanceID: 0}
     materialInformation:
@@ -230,6 +230,11 @@ SubstanceImporter:
       filterMode: 1
       aniso: 1
       wrapMode: 0
+    - name: Tiles_floor_roughness
+      alphaSource: 0
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
     textureAssignments:
     - shaderProp:
         name: _MainTex
@@ -249,7 +254,7 @@ SubstanceImporter:
       textureWidth: 512
       textureHeight: 512
       textureFormat: 0
-      loadingBehavior: 1
+      loadingBehavior: 2
   deletedPrototypes: []
   userData: 
   assetBundleName: 
