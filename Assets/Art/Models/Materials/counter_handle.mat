@@ -38,42 +38,90 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+<<<<<<< HEAD
           name: _ParallaxMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _OcclusionMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _EmissionMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _DetailMask
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _DetailAlbedoMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
+=======
+<<<<<<< HEAD
           name: _MetallicGlossMap
+=======
+          name: _ParallaxMap
+>>>>>>> 32db63a6875a83ae8d16fe1f0122862ca42a3991
+>>>>>>> 6f3ceff292f0e1614e472fdbe8653372182731a0
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+<<<<<<< HEAD
+          name: _OcclusionMap
+=======
+<<<<<<< HEAD
+          name: _ParallaxMap
+=======
+          name: _OcclusionMap
+>>>>>>> 32db63a6875a83ae8d16fe1f0122862ca42a3991
+>>>>>>> 6f3ceff292f0e1614e472fdbe8653372182731a0
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+<<<<<<< HEAD
+          name: _EmissionMap
+=======
+<<<<<<< HEAD
+          name: _OcclusionMap
+=======
+          name: _EmissionMap
+>>>>>>> 32db63a6875a83ae8d16fe1f0122862ca42a3991
+>>>>>>> 6f3ceff292f0e1614e472fdbe8653372182731a0
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+<<<<<<< HEAD
+          name: _DetailMask
+=======
+<<<<<<< HEAD
+          name: _EmissionMap
+=======
+          name: _DetailMask
+>>>>>>> 32db63a6875a83ae8d16fe1f0122862ca42a3991
+>>>>>>> 6f3ceff292f0e1614e472fdbe8653372182731a0
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+<<<<<<< HEAD
+          name: _DetailAlbedoMap
+=======
+<<<<<<< HEAD
+          name: _DetailMask
+=======
+          name: _DetailAlbedoMap
+>>>>>>> 32db63a6875a83ae8d16fe1f0122862ca42a3991
+>>>>>>> 6f3ceff292f0e1614e472fdbe8653372182731a0
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+<<<<<<< HEAD
+          name: _MetallicGlossMap
+=======
+<<<<<<< HEAD
+          name: _DetailAlbedoMap
+=======
+          name: _MetallicGlossMap
+>>>>>>> 32db63a6875a83ae8d16fe1f0122862ca42a3991
+>>>>>>> 6f3ceff292f0e1614e472fdbe8653372182731a0
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -93,10 +141,19 @@ Material:
         second: 0.5
       data:
         first:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 6f3ceff292f0e1614e472fdbe8653372182731a0
           name: _Parallax
         second: 0.02
       data:
         first:
+<<<<<<< HEAD
+=======
+>>>>>>> 32db63a6875a83ae8d16fe1f0122862ca42a3991
+>>>>>>> 6f3ceff292f0e1614e472fdbe8653372182731a0
           name: _ZWrite
         second: 1
       data:
@@ -105,10 +162,30 @@ Material:
         second: 0.5
       data:
         first:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          name: _Metallic
+        second: 0
+      data:
+        first:
+=======
+>>>>>>> 32db63a6875a83ae8d16fe1f0122862ca42a3991
+>>>>>>> 6f3ceff292f0e1614e472fdbe8653372182731a0
           name: _BumpScale
         second: 1
       data:
         first:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          name: _Parallax
+        second: 0.02
+      data:
+        first:
+=======
+>>>>>>> 32db63a6875a83ae8d16fe1f0122862ca42a3991
+>>>>>>> 6f3ceff292f0e1614e472fdbe8653372182731a0
           name: _OcclusionStrength
         second: 1
       data:
@@ -123,10 +200,19 @@ Material:
         first:
           name: _Mode
         second: 0
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 6f3ceff292f0e1614e472fdbe8653372182731a0
       data:
         first:
           name: _Metallic
         second: 0
+<<<<<<< HEAD
+=======
+>>>>>>> 32db63a6875a83ae8d16fe1f0122862ca42a3991
+>>>>>>> 6f3ceff292f0e1614e472fdbe8653372182731a0
     m_Colors:
       data:
         first:

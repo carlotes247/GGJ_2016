@@ -18,6 +18,8 @@ public class Darkness : MonoBehaviour {
 	public AudioClip[] ambientSounds;
 	AudioSource audioSrc;
 
+	public GameObject ocdRenderer;
+
 	public Light[] environmentLights;
 
 	// Use this for initialization
@@ -43,9 +45,13 @@ public class Darkness : MonoBehaviour {
 			theCamera.GetComponent<SSAOPro> ().Intensity = initSSAOIntensity + maxSSAOIntensity * darknessVariable / 100;
 			theCamera.GetComponent<SSAOPro> ().Radius = initSSAORadius + maxSSAORadius * darknessVariable / 100;
 		}
+		ProceduralMaterial substance = ocdRenderer.GetComponent<Renderer> ().sharedMaterial as ProceduralMaterial;
+//		ocdRenderer.GetComponent<Renderer>().material.SetFloat ("OCD_mask", 1f);
 
 		//Audio switching
 		if (darknessVariable < 20 && audioSrc.clip != ambientSounds [0]) {
+			substance.SetProceduralFloat("OCD_mask", 0.1f);
+			substance.RebuildTextures ();
 			audioSrc.clip = ambientSounds [0];
 			audioSrc.Play ();
 		} else if (darknessVariable > 20 && darknessVariable < 50 && audioSrc.clip != ambientSounds [1]) {
@@ -54,6 +60,7 @@ public class Darkness : MonoBehaviour {
 		} else if (darknessVariable > 50 && darknessVariable < 70 && audioSrc.clip != ambientSounds [2]) {
 			audioSrc.clip = ambientSounds [2];
 			audioSrc.Play ();
+//			ocdMat.SetFloat ("OCD_Mask", 1f);
 		} else if(darknessVariable > 70 && audioSrc.clip != ambientSounds [3]){
 			audioSrc.clip = ambientSounds [3];
 			theCamera.GetComponent<Wiggle> ().enabled = true;
