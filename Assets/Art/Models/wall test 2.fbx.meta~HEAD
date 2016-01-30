@@ -1,11 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 742844e86f8101e49b436cf557430906
-timeCreated: 1454166828
-=======
-guid: 31099cd71bb2f8442bd9ce0abcb1194d
+guid: 0ea3e9df7633ec748b523b4c9fff3619
 timeCreated: 1454164685
->>>>>>> 32db63a6875a83ae8d16fe1f0122862ca42a3991
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -14,8 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: polySurface2
-    9500000: //RootNode
+    4300000: pCube33
   materials:
     importMaterials: 1
     materialName: 0
@@ -74,7 +68,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
