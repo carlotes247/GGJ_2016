@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/UnityVS/Editor.meta
 guid: 85d9bcb6330a49043ad4dab56ca3fb7f
 folderAsset: yes
 timeCreated: 1454101545
+=======
+guid: 77e4e639a9cb30c4ca701c4d48f35f84
+folderAsset: yes
+timeCreated: 1454166730
+>>>>>>> b201eacb87c55c60706abfe328e8b5e491b99fd9:Assets/UnityVS/Editor.meta
 licenseType: Free
 DefaultImporter:
   userData: 
