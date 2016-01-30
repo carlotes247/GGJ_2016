@@ -293,8 +293,8 @@ public class InputController : MonoBehaviour {
                 m_RotationCamera.x = 90 * Mathf.Sign(m_RotationCamera.x);
             }
 
-            Toolbox.Instance.GameManager.Player.ObjectTransform.eulerAngles = m_RotationCamera;
-            //Camera.main.transform.eulerAngles = new Vector3(m_PitchCamera,m_YawCamera, 0f);
+            //Toolbox.Instance.GameManager.Player.ObjectTransform.eulerAngles = m_RotationCamera;
+            Camera.main.transform.eulerAngles = m_RotationCamera;
         }
     }
 
