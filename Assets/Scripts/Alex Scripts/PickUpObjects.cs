@@ -114,8 +114,9 @@ public class PickUpObjects : MonoBehaviour {
 			alarmInHand = false; // The AlarmClock is not in hand
 			rb.useGravity = false; // // Turns off gravity
 			rb.isKinematic = true; // Makes it kinematic so it stays there
-			audioSource.enabled = false; // Turns off its sound FX
+			audioSource.enabled = false;
 			puzzleManager.alarmPuzzle = true; // Tells the puzzle manager that the alarm puzzle is finished
+			puzzleManager.SFX = true;
 
 			// Transform the object to where it supposed to be placed, minus the Y value so its correct. The Y value can be set in the inspector for each object
 			objectPosition.position = new Vector3 (Enter.gameObject.transform.position.x, Enter.gameObject.transform.position.y - objectPlacementValue, Enter.gameObject.transform.position.z);
