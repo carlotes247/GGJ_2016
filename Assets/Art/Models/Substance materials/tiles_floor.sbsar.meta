@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: fc515573dc2ac704b82bc50724bad326
-timeCreated: 1454174617
+guid: 9f22abbb7422e574d89fe7becc0943ed
+timeCreated: 1454172535
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -9,17 +9,10 @@ SubstanceImporter:
     name: Tiles_floor
     prototypeName: Tiles_floor
     shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderKeywords: 
+    shaderKeywords: _METALLICGLOSSMAP _NORMALMAP
     renderQueue: -1
     lightmapFlags: 5
     inputs:
-    - name: OCD_mask
-      value:
-        scalar[0]: 0
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
     - name: $randomseed
       value:
         scalar[0]: 0
@@ -50,7 +43,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Tiles_ammount
       value:
-        scalar[0]: 3.4
+        scalar[0]: 1.1
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -76,17 +69,10 @@ SubstanceImporter:
         scalar[2]: 0.278431
         scalar[3]: 0
         texture: {instanceID: 0}
-    - name: OCD_color
-      value:
-        scalar[0]: 0.8897059
-        scalar[1]: 0.09158735
-        scalar[2]: 0.09158735
-        scalar[3]: 0
-        texture: {instanceID: 0}
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
-      scale: {x: 1, y: 1}
+      scale: {x: 5, y: 5}
       generateMipmaps: 1
       generateAllOutputs: 0
       animationUpdateRate: 0
@@ -98,14 +84,14 @@ SubstanceImporter:
             name: _MainTex
           second:
             texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
+            scale: {x: 5, y: 5}
             offset: {x: 0, y: 0}
         data:
           first:
             name: _BumpMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
+            scale: {x: 5, y: 4}
             offset: {x: 0, y: 0}
         data:
           first:
@@ -133,7 +119,7 @@ SubstanceImporter:
             name: _EmissionMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
+            scale: {x: 5, y: 5}
             offset: {x: 0, y: 0}
         data:
           first:
@@ -147,14 +133,14 @@ SubstanceImporter:
             name: _DetailAlbedoMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
+            scale: {x: 4, y: 4}
             offset: {x: 0, y: 0}
         data:
           first:
             name: _MetallicGlossMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
+            scale: {x: 5, y: 4}
             offset: {x: 0, y: 0}
       floats:
         data:
@@ -230,11 +216,6 @@ SubstanceImporter:
       filterMode: 1
       aniso: 1
       wrapMode: 0
-    - name: Tiles_floor_roughness
-      alphaSource: 0
-      filterMode: 1
-      aniso: 1
-      wrapMode: 0
     textureAssignments:
     - shaderProp:
         name: _MainTex
@@ -254,7 +235,7 @@ SubstanceImporter:
       textureWidth: 512
       textureHeight: 512
       textureFormat: 0
-      loadingBehavior: 2
+      loadingBehavior: 1
   deletedPrototypes: []
   userData: 
   assetBundleName: 
