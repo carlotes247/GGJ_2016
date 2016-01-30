@@ -13435,7 +13435,7 @@ MonoBehaviour:
   typeOfMovement: 2
   positionToMove: {x: 0, y: 0, z: 0}
   stopRadius: 0
-  maxVelocity: 0.1
+  maxVelocity: 0.5
   forceToApply: 0
   multiplierForceToStop: 0
   initialDistanceToPoint: 0
