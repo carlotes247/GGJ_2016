@@ -4,6 +4,9 @@ using System.Collections;
 public class PuzzleManager : MonoBehaviour {
 
 	public bool alarmPuzzle;
+	public bool greenBookPuzzle;
+	public bool blueBookPuzzle;
+	public bool brownBookPuzzle;
 
 	AudioSource audioSource;
 	public AudioClip achievementSFX;
@@ -24,7 +27,7 @@ public class PuzzleManager : MonoBehaviour {
 		}
 	
 		// ADD ALL THE OTHER PUZZLE BOOLS HERE, WHEN THEY ALL ARE TRUE HE WINS
-		if (alarmPuzzle == true) {
+		if (alarmPuzzle == true && greenBookPuzzle == true && blueBookPuzzle == true) {
 			Debug.Log ("WIN");
 		}
 	}
