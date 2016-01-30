@@ -294,7 +294,20 @@ public class InputController : MonoBehaviour {
             }
 
             //Toolbox.Instance.GameManager.Player.ObjectTransform.eulerAngles = m_RotationCamera;
-            Camera.main.transform.eulerAngles = m_RotationCamera;
+            
+            // We rotate the player on the X axis only
+            Toolbox.Instance.GameManager.Player.ObjectTransform.eulerAngles = new Vector3 (
+                Toolbox.Instance.GameManager.Player.ObjectTransform.eulerAngles.x,
+                m_RotationCamera.y,
+                Toolbox.Instance.GameManager.Player.ObjectTransform.eulerAngles.z);
+            // We then rotate the camera on the Y axis
+            Camera.main.transform.eulerAngles = new Vector3(
+                m_RotationCamera.x, 
+                Camera.main.transform.eulerAngles.y, 
+                Camera.main.transform.eulerAngles.z);
+            //Camera.main.transform.eulerAngles = new Vector3 ();
+            //Camera.main.transform.eulerAngles = m_RotationCamera;
+            //Toolbox.Instance.GameManager.Player.ObjectTransform.LookAt()
         }
     }
 

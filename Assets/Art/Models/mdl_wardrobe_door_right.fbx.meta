@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+guid: 6ade2d2228869544892a619786a8af3e
+timeCreated: 1454147178
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+=======
+<<<<<<< HEAD
 guid: 8b8f2ed952222cf44a03fb200be5b6ff
 timeCreated: 1454146983
 licenseType: Free
@@ -12,6 +19,7 @@ licenseType: Free
 ModelImporter:
   serializedVersion: 18
 >>>>>>> 6140b876733cac9ce16d2147b47c09319649eb84
+>>>>>>> 352a1c0ec342141db8c5e24de5e2f2f03fd82f9a
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
@@ -27,6 +35,9 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 352a1c0ec342141db8c5e24de5e2f2f03fd82f9a
     resampleRotations: 1
     optimizeGameObjects: 0
     motionNodeName: 
@@ -38,6 +49,8 @@ ModelImporter:
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
+<<<<<<< HEAD
+=======
 =======
     optimizeGameObjects: 0
     motionNodeName: 
@@ -46,6 +59,7 @@ ModelImporter:
     animationPositionError: .5
     animationScaleError: .5
 >>>>>>> 6140b876733cac9ce16d2147b47c09319649eb84
+>>>>>>> 352a1c0ec342141db8c5e24de5e2f2f03fd82f9a
     animationWrapMode: 0
     extraExposedTransformPaths: []
     clipAnimations: []
@@ -73,16 +87,24 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
 =======
+<<<<<<< HEAD
+    normalImportMode: 0
+    tangentImportMode: 3
+=======
     splitTangentsAcrossUV: 1
     normalImportMode: 0
     tangentImportMode: 1
 >>>>>>> 6140b876733cac9ce16d2147b47c09319649eb84
+>>>>>>> 352a1c0ec342141db8c5e24de5e2f2f03fd82f9a
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
     human: []
     skeleton: []
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 352a1c0ec342141db8c5e24de5e2f2f03fd82f9a
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -95,6 +117,8 @@ ModelImporter:
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1
+<<<<<<< HEAD
+=======
 =======
     armTwist: .5
     foreArmTwist: .5
@@ -107,6 +131,7 @@ ModelImporter:
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
 >>>>>>> 6140b876733cac9ce16d2147b47c09319649eb84
+>>>>>>> 352a1c0ec342141db8c5e24de5e2f2f03fd82f9a
   additionalBone: 0
   userData: 
   assetBundleName: 

@@ -388,6 +388,8 @@ public class MovementController : MonoBehaviour
         }
         // We move only in the x and z axis (x, 0, z)
         ObjectManager.ObjectTransform.Translate(axisValues.x * speed, 0f, axisValues.y * speed);
+        
+        
     }
 
     /// The function that will calculate the direction to add a force to the object
