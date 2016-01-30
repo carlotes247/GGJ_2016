@@ -5,6 +5,7 @@ public class PickUpObjects : MonoBehaviour {
 
 	Rigidbody rb;
 	PuzzleManager puzzleManager;
+	AudioSource audioSource;
 	//BoxCollider coll;
 
 	public float objectPlacementValue;
@@ -28,6 +29,7 @@ public class PickUpObjects : MonoBehaviour {
 
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
+		audioSource = GetComponent<AudioSource> ();
 		puzzleManager = GetComponent<PuzzleManager> ();
 
 		//coll = GetComponent<BoxCollider> ();
@@ -78,29 +80,48 @@ public class PickUpObjects : MonoBehaviour {
 		}
 	}
 
-	void OnMouseDown() {
-		if (playerInRange == true && notPlaced == true) // If the player is within range and the object has not been placed. 
-			objectInHand = true;
+	public void OnMouseDown() {
+		PickUpLogic ();
+
+		// OLD, CAN BE USED WITH MOUSE
+		/*if (playerInRange == true && notPlaced == true) // If the player is within range and the object has not been placed. 
+			objectInHand = true;*/
 	}
 
-	void OnMouseUp() {
-		objectPosUpdate = true;
+	public void PickUpLogic() {
+		if (objectInHand == false) {
+			if (playerInRange == true && notPlaced == true) // If the player is within range and the object has not been placed. 
+			objectInHand = true;
+		} else {
+			objectPosUpdate = true;
+			objectInHand = false; 
+			rb.useGravity = true; // If you drop the object, the gravity is activated again. 
+		}
+	}
+
+	public void OnMouseUp() {
+		PickUpLogic ();
+
+		// OLD, CAN BE USED WITH MOUSE
+		/*objectPosUpdate = true;
 		objectInHand = false; 
-		rb.useGravity = true; // If you drop the object, the gravity is activated again. 
+		rb.useGravity = true; // If you drop the object, the gravity is activated again. */
 
 		//coll.enabled = true;
 	}
 
 	void OnTriggerEnter(Collider Enter) {
-		if (Enter.gameObject.tag == "AlarmClockPlacement" && alarmInHand == true) {
-			notPlaced = false;
-			objectInHand = false;
-			alarmInHand = false;
-			rb.useGravity = false;
-			rb.isKinematic = true;
+		if (Enter.gameObject.tag == "AlarmClockPlacement" && alarmInHand == true) { // If the alarm is in hand and it collides with the AlarmClockPlacement object
+			notPlaced = false; // Object has been placed
+			objectInHand = false; // The object is no longer in hand
+			alarmInHand = false; // The AlarmClock is not in hand
+			rb.useGravity = false; // // Turns off gravity
+			rb.isKinematic = true; // Makes it kinematic so it stays there
+			audioSource.enabled = false; // Turns off its sound FX
 
+			// Transform the object to where it supposed to be placed, minus the Y value so its correct. The Y value can be set in the inspector for each object
 			objectPosition.position = new Vector3 (Enter.gameObject.transform.position.x, Enter.gameObject.transform.position.y - objectPlacementValue, Enter.gameObject.transform.position.z);
-			transform.rotation = Enter.gameObject.transform.rotation;
+			transform.rotation = Enter.gameObject.transform.rotation; // Sets the rotation to the placement gameobjects rotation
 
 			Debug.Log ("Alarm Puzzel CLear.");
 		}

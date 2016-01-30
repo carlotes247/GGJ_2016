@@ -12,6 +12,9 @@ TagManager:
   - AlarmClock
   - AlarmClockPlacement
   - PuzzleManager
+  - FloorLamp
+  - Chair
+  - TV
   layers:
   - Default
   - TransparentFX
