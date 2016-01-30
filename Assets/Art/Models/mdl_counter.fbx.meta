@@ -1,25 +1,15 @@
 fileFormatVersion: 2
-guid: 7e24639ac72eb3e43ab084c2e5277fc5
+guid: bc7b763dce8c9f342968008c25ee1281
+timeCreated: 1454165464
+licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: left_door
-    100002: //RootNode
-    100004: right_door
-    100006: wardrobe
-    400000: left_door
-    400002: //RootNode
-    400004: right_door
-    400006: wardrobe
-    2300000: left_door
-    2300002: right_door
-    2300004: wardrobe
-    3300000: left_door
-    3300002: right_door
-    3300004: wardrobe
-    4300000: wardrobe
-    4300002: right_door
-    4300004: left_door
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: polySurface2
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -45,7 +35,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
