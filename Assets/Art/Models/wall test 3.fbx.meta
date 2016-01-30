@@ -1,21 +1,22 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 7e24639ac72eb3e43ab084c2e5277fc5
-timeCreated: 1454147178
-=======
-guid: c20c07866ae97cd42a97dc9edc700974
-timeCreated: 1454146983
->>>>>>> 352a1c0ec342141db8c5e24de5e2f2f03fd82f9a
+guid: 3787fbcdce9e07047b378517556576a8
+timeCreated: 1454160573
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: wardrobe
-    9500000: //RootNode
+    100000: polySurface33
+    100002: polySurface36
+    100004: //RootNode
+    400000: polySurface33
+    400002: polySurface36
+    400004: //RootNode
+    2300000: polySurface33
+    2300002: polySurface36
+    3300000: polySurface33
+    3300002: polySurface36
+    4300000: polySurface36
+    4300002: polySurface33
   materials:
     importMaterials: 1
     materialName: 0
@@ -74,7 +75,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
