@@ -6,7 +6,6 @@ public class PickUpObjects : MonoBehaviour {
 	Rigidbody rb;
 	PuzzleManager puzzleManager;
 	AudioSource audioSource;
-	//BoxCollider coll;
 
 	public float objectPlacementValue;
 	public float pickUpLength = 1f; // The Length away from the player the object is going to be when its picked up
@@ -30,8 +29,8 @@ public class PickUpObjects : MonoBehaviour {
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
 		audioSource = GetComponent<AudioSource> ();
-		puzzleManager = GetComponent<PuzzleManager> ();
-
+		puzzleManager = GameObject.FindGameObjectWithTag("PuzzleManager").GetComponent<PuzzleManager> ();
+	
 		//coll = GetComponent<BoxCollider> ();
 	}
 
@@ -76,7 +75,6 @@ public class PickUpObjects : MonoBehaviour {
 			// THIS IS BEST SUITED FOR 360 CONTOLLER
 			/*transform.position = Vector3.Lerp (objectPosition.position, targetPosition.position, speed);  THE OBJECT GET LERPED TO THE CENTER OF THE SCREEN WITH THIS, NOT THE MOUSE/WII CURSOR POSITION. MAYBE THIS IS BEST IF WE HAVE 360 CONTOLLER
 																											When the player click on the object, it lerps from the position it was, to the child object Hand*/
-			//coll.enabled = false;
 		}
 	}
 
@@ -107,7 +105,6 @@ public class PickUpObjects : MonoBehaviour {
 		objectInHand = false; 
 		rb.useGravity = true; // If you drop the object, the gravity is activated again. */
 
-		//coll.enabled = true;
 	}
 
 	void OnTriggerEnter(Collider Enter) {
@@ -118,6 +115,7 @@ public class PickUpObjects : MonoBehaviour {
 			rb.useGravity = false; // // Turns off gravity
 			rb.isKinematic = true; // Makes it kinematic so it stays there
 			audioSource.enabled = false; // Turns off its sound FX
+			puzzleManager.alarmPuzzle = true; // Tells the puzzle manager that the alarm puzzle is finished
 
 			// Transform the object to where it supposed to be placed, minus the Y value so its correct. The Y value can be set in the inspector for each object
 			objectPosition.position = new Vector3 (Enter.gameObject.transform.position.x, Enter.gameObject.transform.position.y - objectPlacementValue, Enter.gameObject.transform.position.z);
