@@ -13,5 +13,9 @@ public class PuzzleManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+		// ADD ALL THE OTHER PUZZLE BOOLS HERE, WHEN THEY ALL ARE TRUE HE WINS
+		if (alarmPuzzle == true) {
+			Debug.Log ("WIN");
+		}
 	}
 }

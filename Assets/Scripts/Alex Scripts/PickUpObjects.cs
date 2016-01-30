@@ -5,7 +5,7 @@ public class PickUpObjects : MonoBehaviour {
 
 	Rigidbody rb;
 	PuzzleManager puzzleManager;
-	//BoxCollider coll;
+	AudioSource audioSource;
 
 	public float objectPlacementValue;
 	public float pickUpLength = 1f; // The Length away from the player the object is going to be when its picked up
@@ -28,8 +28,9 @@ public class PickUpObjects : MonoBehaviour {
 
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
-		puzzleManager = GetComponent<PuzzleManager> ();
-
+		audioSource = GetComponent<AudioSource> ();
+		puzzleManager = GameObject.FindGameObjectWithTag("PuzzleManager").GetComponent<PuzzleManager> ();
+	
 		//coll = GetComponent<BoxCollider> ();
 	}
 
@@ -74,33 +75,51 @@ public class PickUpObjects : MonoBehaviour {
 			// THIS IS BEST SUITED FOR 360 CONTOLLER
 			/*transform.position = Vector3.Lerp (objectPosition.position, targetPosition.position, speed);  THE OBJECT GET LERPED TO THE CENTER OF THE SCREEN WITH THIS, NOT THE MOUSE/WII CURSOR POSITION. MAYBE THIS IS BEST IF WE HAVE 360 CONTOLLER
 																											When the player click on the object, it lerps from the position it was, to the child object Hand*/
-			//coll.enabled = false;
 		}
 	}
 
-	void OnMouseDown() {
-		if (playerInRange == true && notPlaced == true) // If the player is within range and the object has not been placed. 
-			objectInHand = true;
+	public void OnMouseDown() {
+		PickUpLogic ();
+
+		// OLD, CAN BE USED WITH MOUSE
+		/*if (playerInRange == true && notPlaced == true) // If the player is within range and the object has not been placed. 
+			objectInHand = true;*/
 	}
 
-	void OnMouseUp() {
-		objectPosUpdate = true;
-		objectInHand = false; 
-		rb.useGravity = true; // If you drop the object, the gravity is activated again. 
+	public void PickUpLogic() {
+		if (objectInHand == false) {
+			if (playerInRange == true && notPlaced == true) // If the player is within range and the object has not been placed. 
+			objectInHand = true;
+		} else {
+			objectPosUpdate = true;
+			objectInHand = false; 
+			rb.useGravity = true; // If you drop the object, the gravity is activated again. 
+		}
+	}
 
-		//coll.enabled = true;
+	public void OnMouseUp() {
+		PickUpLogic ();
+
+		// OLD, CAN BE USED WITH MOUSE
+		/*objectPosUpdate = true;
+		objectInHand = false; 
+		rb.useGravity = true; // If you drop the object, the gravity is activated again. */
+
 	}
 
 	void OnTriggerEnter(Collider Enter) {
-		if (Enter.gameObject.tag == "AlarmClockPlacement" && alarmInHand == true) {
-			notPlaced = false;
-			objectInHand = false;
-			alarmInHand = false;
-			rb.useGravity = false;
-			rb.isKinematic = true;
+		if (Enter.gameObject.tag == "AlarmClockPlacement" && alarmInHand == true) { // If the alarm is in hand and it collides with the AlarmClockPlacement object
+			notPlaced = false; // Object has been placed
+			objectInHand = false; // The object is no longer in hand
+			alarmInHand = false; // The AlarmClock is not in hand
+			rb.useGravity = false; // // Turns off gravity
+			rb.isKinematic = true; // Makes it kinematic so it stays there
+			audioSource.enabled = false; // Turns off its sound FX
+			puzzleManager.alarmPuzzle = true; // Tells the puzzle manager that the alarm puzzle is finished
 
+			// Transform the object to where it supposed to be placed, minus the Y value so its correct. The Y value can be set in the inspector for each object
 			objectPosition.position = new Vector3 (Enter.gameObject.transform.position.x, Enter.gameObject.transform.position.y - objectPlacementValue, Enter.gameObject.transform.position.z);
-			transform.rotation = Enter.gameObject.transform.rotation;
+			transform.rotation = Enter.gameObject.transform.rotation; // Sets the rotation to the placement gameobjects rotation
 
 			Debug.Log ("Alarm Puzzel CLear.");
 		}
