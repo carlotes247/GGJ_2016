@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3313910}
   - 23: {fileID: 2330888}
   - 95: {fileID: 9546454}
-  - 65: {fileID: 6526170}
+  - 64: {fileID: 6439670}
   m_Layer: 0
   m_Name: coffetable
   m_TagString: Untagged
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.963733, y: -3.5404556e-16, z: -2.3136077}
+  m_LocalPosition: {x: -8.963733, y: -3.5404556e-16, z: -7.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -64,8 +64,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146336}
   m_Mesh: {fileID: 4300000, guid: afae0d0017fac8443b1606b67f7dada5, type: 3}
---- !u!65 &6526170
-BoxCollider:
+--- !u!64 &6439670
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -74,8 +74,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1960002, y: 0.35850438, z: 1.1894487}
-  m_Center: {x: 0, y: 0.17925219, z: 0}
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: afae0d0017fac8443b1606b67f7dada5, type: 3}
 --- !u!95 &9546454
 Animator:
   serializedVersion: 3
