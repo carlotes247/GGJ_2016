@@ -16,6 +16,9 @@ ModelImporter:
     100016: Wall_L
     100018: wall_open
     100020: Window
+    100022: Parts
+    100024: pCube25
+    100026: wall_end
     400000: door
     400002: Floor
     400004: Half_Wall
@@ -27,6 +30,9 @@ ModelImporter:
     400016: Wall_L
     400018: wall_open
     400020: Window
+    400022: Parts
+    400024: pCube25
+    400026: wall_end
     2300000: door
     2300002: Floor
     2300004: Half_Wall
@@ -37,6 +43,8 @@ ModelImporter:
     2300014: Wall_L
     2300016: wall_open
     2300018: Window
+    2300020: pCube25
+    2300022: wall_end
     3300000: door
     3300002: Floor
     3300004: Half_Wall
@@ -47,6 +55,8 @@ ModelImporter:
     3300014: Wall_L
     3300016: wall_open
     3300018: Window
+    3300020: pCube25
+    3300022: wall_end
     4300000: wall_I
     4300002: pCube7
     4300004: Floor
@@ -57,6 +67,8 @@ ModelImporter:
     4300014: pPlane5
     4300016: door
     4300018: Half_Wall
+    4300020: wall_end
+    4300022: pCube25
   materials:
     importMaterials: 1
     materialName: 0
