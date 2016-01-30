@@ -1,74 +1,15 @@
 fileFormatVersion: 2
-guid: ecbe42e988fe3514b80b7cb5311412d3
-timeCreated: 1454105062
+guid: 92f0c3bef5e069249a8fc46f2bc155d5
+timeCreated: 1454143316
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: door
-    100002: Floor
-    100004: Half_Wall
-    100006: half_wall
-    100008: //RootNode
-    100010: pCube7
-    100012: pPlane5
-    100014: wall_I
-    100016: Wall_L
-    100018: wall_open
-    100020: Window
-    100022: Parts
-    100024: pCube25
-    100026: wall_end
-    400000: door
-    400002: Floor
-    400004: Half_Wall
-    400006: half_wall
-    400008: //RootNode
-    400010: pCube7
-    400012: pPlane5
-    400014: wall_I
-    400016: Wall_L
-    400018: wall_open
-    400020: Window
-    400022: Parts
-    400024: pCube25
-    400026: wall_end
-    2300000: door
-    2300002: Floor
-    2300004: Half_Wall
-    2300006: half_wall
-    2300008: pCube7
-    2300010: pPlane5
-    2300012: wall_I
-    2300014: Wall_L
-    2300016: wall_open
-    2300018: Window
-    2300020: pCube25
-    2300022: wall_end
-    3300000: door
-    3300002: Floor
-    3300004: Half_Wall
-    3300006: half_wall
-    3300008: pCube7
-    3300010: pPlane5
-    3300012: wall_I
-    3300014: Wall_L
-    3300016: wall_open
-    3300018: Window
-    3300020: pCube25
-    3300022: wall_end
-    4300000: wall_I
-    4300002: pCube7
-    4300004: Floor
-    4300006: Wall_L
-    4300008: half_wall
-    4300010: Window
-    4300012: wall_open
-    4300014: pPlane5
-    4300016: door
-    4300018: Half_Wall
-    4300020: wall_end
-    4300022: pCube25
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: polySurface14
   materials:
     importMaterials: 1
     materialName: 0
@@ -98,7 +39,7 @@ ModelImporter:
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
