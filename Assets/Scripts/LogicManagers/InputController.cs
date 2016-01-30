@@ -84,13 +84,10 @@ public class InputController : MonoBehaviour {
     public float DelayBetweenShots { get { return this.m_DelayBetweenShots; } set { this.m_DelayBetweenShots = value; } }
 
     /// <summary>
-    /// (Field) The vertical rotation of the camera
+    /// (Field) The rotation of the camera in eulerAngles
     /// </summary>
-    private float m_YawCamera;
-    /// <summary>
-    /// (Field) The horizontal rotation of the camera
-    /// </summary>
-    private float m_PitchCamera;
+    [SerializeField]
+    private Vector2 m_RotationCamera;
     /// <summary>
     /// (Field) The Axis of the camera scalated to (-1, 1)
     /// </summary>
@@ -284,11 +281,20 @@ public class InputController : MonoBehaviour {
             }
 
             //m_YawCamera += 2f * ReusableMethods.Normalization.ScaleNormalize((ReusableMethods.Normalization.Normalize(ScreenPointerPos.x, 0, Screen.width)), -1, 1);
-            m_YawCamera += 2f * m_CameraAxis.x;
+            //m_YawCamera += 2f * m_CameraAxis.x;
+            m_RotationCamera.y += 2f * m_CameraAxis.x;
             //m_PitchCamera -= 2f * ReusableMethods.Normalization.ScaleNormalize((ReusableMethods.Normalization.Normalize(ScreenPointerPos.y, 0, Screen.height)), -1, 1);
-            m_PitchCamera -= 2f * m_CameraAxis.y;
-            Toolbox.Instance.GameManager.Player.ObjectTransform.eulerAngles = new Vector3(m_PitchCamera, m_YawCamera, 0f);
-            //Camera.main.transform.eulerAngles = new Vector3(m_PitchCamera,m_YawCamera, 0f);
+            //m_PitchCamera -= 2f * m_CameraAxis.y;
+            m_RotationCamera.x -= 2f * m_CameraAxis.y;
+
+            // We limit the rotation in the Y axis to 90 degrees (that is the X one in euler angles)
+            if (Mathf.Abs(m_RotationCamera.x) > 90)
+            {
+                m_RotationCamera.x = 90 * Mathf.Sign(m_RotationCamera.x);
+            }
+
+            //Toolbox.Instance.GameManager.Player.ObjectTransform.eulerAngles = m_RotationCamera;
+            Camera.main.transform.eulerAngles = m_RotationCamera;
         }
     }
 
