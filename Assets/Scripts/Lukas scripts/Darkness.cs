@@ -38,16 +38,16 @@ public class Darkness : MonoBehaviour {
 			theCamera.GetComponent<SSAOPro>().Radius = initSSAORadius + maxSSAORadius * darknessVariable/100;
 			theCamera.GetComponent<FastVignette>().Darkness = initVignetteIntensity + maxVignetteIntensity * darknessVariable/100;
 		}
-		if (darknessVariable < 20) {
+		if (darknessVariable < 20 && audioSrc.clip != ambientSounds [0]) {
 			audioSrc.clip = ambientSounds [0];
 			audioSrc.Play ();
-		} else if (darknessVariable < 50) {
+		} else if (darknessVariable > 20 && darknessVariable < 50 && audioSrc.clip != ambientSounds [1]) {
 			audioSrc.clip = ambientSounds [1];
 			audioSrc.Play ();
-		} else if (darknessVariable < 70) {
+		} else if (darknessVariable > 50 && darknessVariable < 70 && audioSrc.clip != ambientSounds [2]) {
 			audioSrc.clip = ambientSounds [2];
 			audioSrc.Play ();
-		} else {
+		} else if(darknessVariable > 70 && audioSrc.clip != ambientSounds [3]){
 			audioSrc.clip = ambientSounds [3];
 			audioSrc.Play ();
 		}
