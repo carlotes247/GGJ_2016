@@ -1,16 +1,15 @@
 fileFormatVersion: 2
-guid: 4ddf3f65aca6269438e4e1f014d0c899
+guid: 2d354816dc1a4a64ca1cbe954cd79ed6
+timeCreated: 1454163921
+licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: pSolid1
     400000: //RootNode
-    400002: pSolid1
-    2300000: pSolid1
-    3300000: pSolid1
-    4300000: pSolid1
-    9500000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: pCube33
   materials:
     importMaterials: 1
     materialName: 0
@@ -49,11 +48,11 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 4
+    tangentImportMode: 3
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -69,7 +68,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
