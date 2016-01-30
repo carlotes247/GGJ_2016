@@ -34,6 +34,16 @@ public class InputController : MonoBehaviour {
     // Property
     public Vector3 ScreenPointerPos { get { return this.screenPointerPos; } set { this.screenPointerPos = value; } }
 
+    /// <summary>
+    /// (Field) The axis that the actual controller is returning
+    /// </summary>
+    [SerializeField]
+    private Vector2 m_ControllerAxis;
+    /// <summary>
+    /// (Property) The axis that the actual controller is returning
+    /// </summary>
+    public Vector2 ControllerAxis { get { return this.m_ControllerAxis; } }
+
     /// The Wiimote Input received by the computer
     // Field
     [SerializeField]
@@ -73,6 +83,23 @@ public class InputController : MonoBehaviour {
     /// </summary>
     public float DelayBetweenShots { get { return this.m_DelayBetweenShots; } set { this.m_DelayBetweenShots = value; } }
 
+    /// <summary>
+    /// (Field) The vertical rotation of the camera
+    /// </summary>
+    private float m_YawCamera;
+    /// <summary>
+    /// (Field) The horizontal rotation of the camera
+    /// </summary>
+    private float m_PitchCamera;
+    /// <summary>
+    /// (Field) The Axis of the camera scalated to (-1, 1)
+    /// </summary>
+    private Vector2 m_CameraAxis;
+    /// <summary>
+    /// (Property) The Axis of the camera scalated to (-1, 1)
+    /// </summary>
+    private Vector2 CameraAxis { get { return m_CameraAxis; } set { this.m_CameraAxis = value; } }
+
     // Use this for initialization
     void Start () {
         //WiimoteInput.WiimoteInputLogic();
@@ -96,6 +123,10 @@ public class InputController : MonoBehaviour {
         CheckInputType();
         // We update the values of the screenPointerPos
         UpdateScreenPointerPos();
+        // We update the values of the controllerAxis
+        UpdateControllerAxis();
+        // We update the values of the camera Axis
+        UpdateCameraAxis();
         // We draw the pointer in the specified pos
         DrawScreenPointer(ScreenPointerPos);
         // We check if the user press any buttons
@@ -136,6 +167,71 @@ public class InputController : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Updates the values of the controller Axis
+    /// </summary>
+    private void UpdateControllerAxis ()
+    {
+        switch (InputType)
+        {
+            case TypeOfInput.Mouse:
+                // We get the input from the keyboard
+                UpdateAxisWASD();
+                break;
+            case TypeOfInput.WiiMote:
+                // We get the input from the WiimoteNunchuck
+                m_ControllerAxis = WiimoteInput.NunchuckJoystickValues;
+                break;
+            default:
+                break;
+        }
+    }
+    /// <summary>
+    /// Updates the ControllerAxis from the WASD keys in the keyboard
+    /// </summary>
+    private void UpdateAxisWASD ()
+    {
+        // We get the input from the keyboard
+        // X axis
+        if (Input.GetKey(KeyCode.D))
+        {
+            m_ControllerAxis.x = 1;
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            m_ControllerAxis.x = -1;
+        }
+        else
+        {
+            m_ControllerAxis.x = 0;
+        }
+        // Y axis
+        if (Input.GetKey(KeyCode.W))
+        {
+            m_ControllerAxis.y = 1;
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            m_ControllerAxis.y = -1;
+        }
+        else
+        {
+            m_ControllerAxis.y = 0;
+        }
+    }
+
+    /// <summary>
+    /// Updates the Camera Axis to a value between (-1, 1)
+    /// </summary>
+    private void UpdateCameraAxis ()
+    {
+        // X is the Scalated from the normalized screenPointerPos and the screen width
+        m_CameraAxis.x = ReusableMethods.Normalization.ScaleNormalize((ReusableMethods.Normalization.Normalize(ScreenPointerPos.x, 0, Screen.width)), -1, 1);
+        // Y is the Scalated from the normalized screenPointerPos and the screen height
+        m_CameraAxis.y = ReusableMethods.Normalization.ScaleNormalize((ReusableMethods.Normalization.Normalize(ScreenPointerPos.y, 0, Screen.height)), -1, 1);
+    
+    }
+
     /// The function in charge of Drawing on Screen a pointer (can be used by the any source of input, including mouse, Wiimote, PSMove, etc)
     void DrawScreenPointer(Vector3 values)
     {
@@ -147,9 +243,12 @@ public class InputController : MonoBehaviour {
         Toolbox.Instance.GameManager.HudController.InGameCursor.transform.position = new Vector3(value_x, value_y, 0);
     }
 
-    /// The function to check User the user Input
+    /// <summary>
+    /// The function to check the user Input
+    /// </summary>
     private void CheckUserInput()
     {
+        // We check for main click input
         if (Input.GetMouseButtonDown(0) || WiimoteInput.ButtonB && (m_Timer.GenericCountDown(m_DelayBetweenShots)) )
         {
             if (!Toolbox.Instance.GameManager.MenuController.MenuOpen)
@@ -163,6 +262,33 @@ public class InputController : MonoBehaviour {
                     WiimoteInput.SetWiimoteRumble(0, WiimoteInput.TimeToRumble);  
                 }
             }
+        }
+
+        // Player Movement Input
+        // If the player can move from the inputController...
+        if (Toolbox.Instance.GameManager.Player.MovementController.TypeOfMovement == MovementController.TypeOfMovementEnum.InputController)
+        {
+            // ... We move the player according to the axis
+            Toolbox.Instance.GameManager.Player.MovementController.MoveInputController(m_ControllerAxis,
+                Toolbox.Instance.GameManager.Player.MovementController.MaxVelocity);
+
+            // ... We rotate the camera according to the pointer pos
+            // The deadzone is (0.2f, 0.1f)
+            if (m_CameraAxis.x > -0.2 && m_CameraAxis.x < 0.2)
+            {
+                m_CameraAxis.x = 0f;
+            }
+            if (m_CameraAxis.y > -0.1 && m_CameraAxis.y < 0.1)
+            {
+                m_CameraAxis.y = 0f;
+            }
+
+            //m_YawCamera += 2f * ReusableMethods.Normalization.ScaleNormalize((ReusableMethods.Normalization.Normalize(ScreenPointerPos.x, 0, Screen.width)), -1, 1);
+            m_YawCamera += 2f * m_CameraAxis.x;
+            //m_PitchCamera -= 2f * ReusableMethods.Normalization.ScaleNormalize((ReusableMethods.Normalization.Normalize(ScreenPointerPos.y, 0, Screen.height)), -1, 1);
+            m_PitchCamera -= 2f * m_CameraAxis.y;
+            Toolbox.Instance.GameManager.Player.ObjectTransform.eulerAngles = new Vector3(m_PitchCamera, m_YawCamera, 0f);
+            //Camera.main.transform.eulerAngles = new Vector3(m_PitchCamera,m_YawCamera, 0f);
         }
     }
 

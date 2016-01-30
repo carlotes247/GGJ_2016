@@ -613,4 +613,4 @@ MonoBehaviour:
   sun: {fileID: 1724503632}
   rotationDirection: {x: 1, y: 0, z: 0}
   sunriseAngleLightIntensifier: 50
-  sunriseIntensitySpeed: 1
+  sunriseIntensitySpeed: 0.07

@@ -164,6 +164,18 @@ namespace ReusableMethods
             // We calculate the denormalized value of the value passed in
             return ( valueNormalized * (max - min) + min );
         }
+
+        /// <summary>
+        /// Returns a scaled value between a mix and a max from a normalized value passed in
+        /// </summary>
+        /// <param name="normalizedValue"> The normalize value to scale</param>
+        /// <param name="minToScale"> The minimum the scalation can reach</param>
+        /// <param name="maxToScale"> The maximum the scalation can reach</param>
+        /// <returns></returns>
+        public static float ScaleNormalize (float normalizedValue, float minToScale, float maxToScale)
+        {
+            return ( normalizedValue * (maxToScale - minToScale) + minToScale );
+        }
     }
 
     /// <summary>

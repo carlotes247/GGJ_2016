@@ -52,7 +52,8 @@ public class MovementController : MonoBehaviour
     public enum TypeOfMovementEnum
     {
         Rigidbody,
-        NavMeshAgent
+        NavMeshAgent,
+        InputController
     }
     // Field
     [SerializeField]
@@ -219,7 +220,7 @@ public class MovementController : MonoBehaviour
                 break;
             case TypeOfMovementEnum.NavMeshAgent:
                 MoveNavMeshAgent(pointToMove);
-                break;
+                break;            
             default:
                 break;
         }
@@ -364,6 +365,29 @@ public class MovementController : MonoBehaviour
             UpdateMovementPhase(MovementPhaseEnum.Moving);
 
         }
+    }
+
+    /// <summary>
+    /// Moves the current object according to the axis and speed passed in
+    /// </summary>
+    /// <param name="axisValues"> The axis to move the current object  </param>
+    /// <param name="speed"> The speed to move at </param>
+    public void MoveInputController(Vector2 axisValues, float speed)
+    {
+        // If x is between (-0.1, 0.1) ...
+        if (axisValues.x > -0.1 && axisValues.x < 0.1)
+        {
+            // x is too small, we set it to 0
+            axisValues.x = 0f;
+        }
+        // If y is between (-0.1, 0.1) ...
+        if (axisValues.y > -0.1 && axisValues.y < 0.1)
+        {
+            // y is too small, we set it to 0
+            axisValues.y = 0f;
+        }
+        // We move only in the x and z axis (x, 0, z)
+        ObjectManager.ObjectTransform.Translate(axisValues.x * speed, 0f, axisValues.y * speed);
     }
 
     /// The function that will calculate the direction to add a force to the object
