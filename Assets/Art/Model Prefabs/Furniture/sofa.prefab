@@ -11,12 +11,13 @@ GameObject:
   - 33: {fileID: 3385248}
   - 23: {fileID: 2322674}
   - 64: {fileID: 6452030}
+  - 64: {fileID: 6406474}
   m_Layer: 0
   m_Name: sofa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &404170
 Transform:
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 122196}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0.00000035762787}
-  m_LocalPosition: {x: 1.39, y: 0.01, z: -1.2440785}
+  m_LocalPosition: {x: 12.188291, y: 4.562133, z: 5.2848835}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -62,6 +63,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 122196}
+  m_Mesh: {fileID: 4300002, guid: 84da03042bd1d054bae53601ca52d9d6, type: 3}
+--- !u!64 &6406474
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122196}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
   m_Mesh: {fileID: 4300002, guid: 84da03042bd1d054bae53601ca52d9d6, type: 3}
 --- !u!64 &6452030
 MeshCollider:
