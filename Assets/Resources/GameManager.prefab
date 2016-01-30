@@ -8894,7 +8894,7 @@ MonoBehaviour:
   screenPointerPos: {x: 0, y: 0, z: 0}
   m_ControllerAxis: {x: 0, y: 0}
   wiimoteInput: {fileID: 11475540}
-  inputType: 1
+  inputType: 0
   m_DelayBetweenShots: 0.1
   m_RotationCamera: {x: 0, y: 0}
   m_CameraRotationSpeed: 2
