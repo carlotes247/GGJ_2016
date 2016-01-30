@@ -19043,7 +19043,7 @@ GameObject:
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1636284647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20882,6 +20882,10 @@ Prefab:
     - target: {fileID: 8213428, guid: 4aa424b83523bc94a88490fab3e34021, type: 2}
       propertyPath: Loop
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446150, guid: 4aa424b83523bc94a88490fab3e34021, type: 2}
+      propertyPath: darknessSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4aa424b83523bc94a88490fab3e34021, type: 2}
